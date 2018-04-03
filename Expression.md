@@ -2,6 +2,7 @@
 balbalal
 ```java
 if (x > 0 || false) {
+ obj.get("foo");
 }
 ```
 ## Sub
