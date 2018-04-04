@@ -8,11 +8,13 @@ Prepara a query para consultar as entidades/atores pais deste ator, ou seja, que
 Exemplo de uso:
 
 ```java
-Relatable parent = actor.getParents().next(); // recupera o 1o ator/entidade relacionado com este ator
+// recupera o 1o ator/entidade relacionado com este ator
+Relatable parent = actor.getParents().next();
 ```
 
 ```java
-for (Relatable parent : actor.getParents()) { // itera nas nos atores/entidades relacionados com este ator
+// itera nas nos atores/entidades relacionados com este ator
+for (Relatable parent : actor.getParents()) {
     ...
 }
 ```
@@ -31,11 +33,13 @@ Prepara a query para consultar os atores pais, ou seja, que possuem um relaciona
 Exemplo de uso:
 
 ```java
-Actor parent = actor.getParentActors().next(); // recupera o 1o ator relacionado com este ator
+// recupera o 1o ator relacionado com este ator
+Actor parent = actor.getParentActors().next();
 ```
 
 ```java
-for (Actor parent : actor.getParentActors()) { // itera nas nos atores relacionados com este ator
+// itera nas nos atores relacionados com este ator
+for (Actor parent : actor.getParentActors()) {
     ...
 }
 ```
