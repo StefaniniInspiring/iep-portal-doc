@@ -11,7 +11,7 @@ Exemplo de uso:
 Relatable parent = actor.getParents().next(); // recupera o 1o ator/entidade relacionado com este ator
 ```
 
-```ruby
+```java
 for (Relatable parent : actor.getParents()) { // itera nas nos atores/entidades relacionados com este ator
     ...
 }
@@ -31,11 +31,11 @@ Prepara a query para consultar os atores que possuem um relacionamento bidirecio
 Exemplo de uso:
 
 ```java
-Actor parent = actor.getParents().next(); // recupera o 1o ator relacionado com este ator
+Actor parent = actor.getParentActors().next(); // recupera o 1o ator relacionado com este ator
 ```
 
-```ruby
-for (Actor parent : actor.getParents()) { // itera nas nos atores/entidades relacionados com este ator
+```java
+for (Actor parent : actor.getParentActors()) { // itera nas nos atores relacionados com este ator
     ...
 }
 ```
