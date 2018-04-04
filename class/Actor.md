@@ -1,7 +1,18 @@
 # Actor API
 
+---
+
 ## getParents()
 Prepara a query para consultar as entidades/atores que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Exemplo de uso:
+```
+Relatable parent = actor.getParents().next(); // recupera o 1o ator/entidade relacionado com este ator
+```
+```
+for (Relatable parent : actor.getParents()) { // itera nas nos atores/entidades relacionaods com este ator
+    ...
+}
+```
 ### Parâmetros
 n/a
 ### Retorno
