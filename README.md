@@ -1,2 +1,2 @@
 # Tópicos
-* [Ator](topic/Actor)
+* [Ator](topic/Actor#ajuda)
