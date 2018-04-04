@@ -3,7 +3,7 @@
 ---
 
 ## getParents()
-Prepara a query para consultar as entidades/atores que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Prepara a query para consultar as entidades/atores pais deste ator, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
 
 Exemplo de uso:
 
@@ -26,7 +26,7 @@ n/a
 ---
 
 ## getParentActors()
-Prepara a query para consultar os atores que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Prepara a query para consultar os atores pais, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
 
 Exemplo de uso:
 
