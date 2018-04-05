@@ -149,7 +149,7 @@ entity.getChildren().relatedBetween(beforeYesterday, yesterday);
 
 Usado para paginação, desconsidera os primeiros n resultados da consulta.
 
-O primeiro elemento é indexado na posição 0.
+Pode-se pensar também como _n_ sendo indice do primeiro relacionamento a se retornar, com o primeiro elemento indexado na posição 0, o segundo em 1 e assim por diante.
 
 Exemplo de uso:
 
@@ -160,6 +160,25 @@ entity.getChildren().offset(1).next();
 
 ### Parâmetros
 * ```int``` n - número de resultados a serem descartados em uma consulta.
+
+### Retorno
+[Related](Related) - este objeto
+
+---
+
+## limit(n)
+
+Limita a quantidade máxima de relacionamentos da consulta.
+
+Exemplo de uso:
+
+```java
+// limita a consulta em no máximo 10 resultados
+entity.getChildren().limit(10);
+```
+
+### Parâmetros
+* ```int``` n - quantidade máxima de resultados na consulta.
 
 ### Retorno
 [Related](Related) - este objeto
