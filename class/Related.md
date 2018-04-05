@@ -16,7 +16,7 @@ loja.getChildren().ofType("cliente", "empregado");
 ```
 
 ### Parâmetros
-* types - um ou mais tipos (códigos de configuração) de ator ou entitade.
+* types - um ou mais tipos (códigos de configuração) de ator ou entitade. Tipo: ```String```.
 
 ### Retorno
 [Related](Related) - este objeto
@@ -36,7 +36,7 @@ entity.getChildren().relatedOn(yesterday);
 ```
 
 ### Parâmetros
-* date - data de criação do relacionamento
+* date - data de criação do relacionamento. Tipo ```Date```.
 
 ### Retorno
 [Related](Related) - este objeto
@@ -56,7 +56,7 @@ entity.getChildren().relatedOnOrAfter(yesterday);
 ```
 
 ### Parâmetros
-* date - data de criação do relacionamento
+* date - data de criação do relacionamento. Tipo ```Date```.
 
 ### Retorno
 [Related](Related) - este objeto
@@ -76,7 +76,7 @@ entity.getChildren().relatedOnOrBefore(yesterday);
 ```
 
 ### Parâmetros
-* date - data de criação do relacionamento
+* date - data de criação do relacionamento. Tipo ```Date```.
 
 ### Retorno
 [Related](Related) - este objeto
@@ -96,7 +96,7 @@ entity.getChildren().relatedAfter(yesterday);
 ```
 
 ### Parâmetros
-* date - data de criação do relacionamento
+* date - data de criação do relacionamento. Tipo ```Date```.
 
 ### Retorno
 [Related](Related) - este objeto
@@ -116,7 +116,7 @@ entity.getChildren().relatedBefore(yesterday);
 ```
 
 ### Parâmetros
-* date - data de criação do relacionamento
+* date - data de criação do relacionamento. Tipo ```Date```.
 
 ### Retorno
 [Related](Related) - este objeto
@@ -137,7 +137,7 @@ entity.getChildren().relatedBetween(beforeYesterday, yesterday);
 ```
 
 ### Parâmetros
-* date - data de criação do relacionamento
+* date - data de criação do relacionamento. Tipo ```Date```.
 
 ### Retorno
 [Related](Related) - este objeto
@@ -158,7 +158,7 @@ entity.getChildren().offset(1).next();
 ```
 
 ### Parâmetros
-* n - número de resultados a serem descartados em uma consulta
+* n - número de resultados a serem descartados em uma consulta. Tipo ```int```
 
 ### Retorno
 [Related](Related) - este objeto
