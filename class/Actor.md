@@ -158,3 +158,84 @@ n/a
 [Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades irmãs deste ator
 
 ---
+
+## getChildren()
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores/entidades filhos deste ator, ou seja, que são relacionadas de forma bidirecional ou unidirecional com este ator.
+
+Exemplo de uso:
+
+```java
+// constrói o objeto capaz de consultar os filhos do ator
+Related children = actor.getChildren();
+// recupera o 1o ator/entidade filho deste ator
+Relatable child = children.next();
+```
+
+```java
+// itera nas nos atores/entidades filhos deste ator
+for (Relatable child : actor.getChildren()) {
+    ...
+}
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades e atores filhos deste ator
+
+---
+
+## getChildrenActors()
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores filhos deste ator, ou seja, que são relacionadas de forma bidirecional ou unidirecional com este ator.
+
+Exemplo de uso:
+
+```java
+// constrói o objeto capaz de consultar os filhos do ator
+Related children = actor.getChildrenActors();
+// recupera o 1o ator filho deste ator
+Actor child = children.next();
+```
+
+```java
+// itera nas nos atores filhos deste ator
+for (Actor child : actor.getChildrenActors()) {
+    ...
+}
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar atores filhos deste ator
+
+---
+
+## getChildrenEntities()
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades filhas deste ator, ou seja, que são relacionadas de forma bidirecional ou unidirecional com este ator.
+
+Exemplo de uso:
+
+```java
+// constrói o objeto capaz de consultar os filhos do ator
+Related children = actor.getChildrenEntities();
+// recupera a 1a entidade filha deste ator
+Entity child = children.next();
+```
+
+```java
+// itera nas nas entidades filhas deste ator
+for (Entity child : actor.getChildrenEntities()) {
+    ...
+}
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades filhas deste ator
+
+---
