@@ -231,9 +231,9 @@ n/a
 
 Retorna o [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html) deste objeto, capaz de realizar a consulta dos relacionamentos e disponibilizar o resultado durante uma iteração.
 
-Este método é chamado automaticamente em uma iteração, ou quando este objeto é usado no construtor de uma [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html):
+Este método é chamado automaticamente em uma iteração ou quando este objeto é usado no construtor de uma [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html):
 
-```
+```java
 Related related = loja.getChildren();
 
 // related.iterator() invocado automaticamente
@@ -250,5 +250,24 @@ n/a
 
 ### Retorno
 [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html) - objeto para iterar nos resultados da consulta.
+
+---
+
+## toList()
+
+Realiza a consulta, itera nos resultados e os insere em uma lista.
+
+Exemplo:
+
+```java
+// consulta os clientes de uma loja e os insere em uma lista
+List<Actors> clientes = loja.getChildrenActors().ofType("cliente").toList();
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Relatable](Relatable)> - o resultado da consulta em uma lista.
 
 ---
