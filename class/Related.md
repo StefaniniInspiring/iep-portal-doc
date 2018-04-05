@@ -285,7 +285,7 @@ Map<String, Actor> clientePorId = loja.getChildrenActors().ofType("cliente").toM
 n/a
 
 ### Retorno
-[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)>] - o resultado da consulta em um mapa indexado pelos identificadores dos resultados.
+[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)> - o resultado da consulta em um mapa indexado pelos identificadores dos resultados.
 
 ---
 
@@ -301,7 +301,7 @@ Map<String, Actor> clientePorTipo = loja.getChildrenActors().ofType("cliente").g
 n/a
 
 ### Retorno
-[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)>] - o resultado da consulta em um mapa indexado pelas configurações dos resultados.
+[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)> - o resultado da consulta em um mapa indexado pelas configurações dos resultados.
 
 ---
 
@@ -317,6 +317,6 @@ Map<String, Actor> clientePorIdade = loja.getChildrenActors().ofType("cliente").
 n/a
 
 ### Retorno
-[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)>] - o resultado da consulta em um mapa indexado pelo valor de um atributo dos resultados.
+[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)> - o resultado da consulta em um mapa indexado pelo valor de um atributo dos resultados.
 
 ---
