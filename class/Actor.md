@@ -239,3 +239,28 @@ n/a
 [Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades filhas deste ator
 
 ---
+
+## filter()
+
+Retorna um objeto [Filter](Filter) para filtrar os atores/entidades da consulta.
+
+### Parâmetros
+n/a
+
+### Retorno
+[Filter](Filter) - objeto para filtrar os atores/entidades da consulta.
+
+---
+
+## order()
+
+Retorna um objeto [Order](Order) para ordenar os atores/entidades da consulta.
+
+### Parâmetros
+n/a
+
+### Retorno
+
+[Order](Order) - objeto para ordenar os atores/entidades da consulta.
+
+---
