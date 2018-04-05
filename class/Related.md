@@ -271,3 +271,20 @@ n/a
 [List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)<[Relatable](Relatable)> - o resultado da consulta em uma lista.
 
 ---
+ ## toMap()
+ Realiza a consulta, itera nos resultados e os insere em um mapa onde a chave é o ID do ator/entidade e o valor é o ator/entidade em questão.
+ 
+ Exemplo:
+ 
+```java
+// consulta os clientes de uma loja e os insere em um mapa
+Map<String, Actors> clientes = loja.getChildrenActors().ofType("cliente").toMap();
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)>] - o resultado da consulta em um mapa indexado pelos identificadores dos resultados.
+
+---
