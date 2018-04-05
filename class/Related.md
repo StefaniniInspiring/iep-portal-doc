@@ -205,7 +205,50 @@ Retorna um objeto [Order](Order) para ordenar os atores/entidades da consulta.
 n/a
 
 ### Retorno
-
 [Order](Order) - objeto para ordenar os atores/entidades resultantes de uma consulta.
+
+---
+
+## count()
+Realiza a consulta dos relacionamentos e retorna a quantidade de elementos encontrados.
+
+Exemplo de uso:
+
+```java
+// contar a quantidade de clientes de uma loja
+long clientes = loja.getChildren().ofType("cliente").count();
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+```long``` - a quantidade de elementos encontrados na consulta.
+
+---
+
+## iterator()
+
+Retorna o [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html) deste objeto, capaz de realizar a consulta dos relacionamentos e disponibilizar o resultado durante uma iteração.
+
+Este método é chamado automaticamente em uma iteração, ou quando este objeto é usado no construtor de uma [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html):
+
+```
+Related related = loja.getChildren();
+
+// related.iterator() invocado automaticamente
+for(Entity entity : related) { 
+  ...
+}
+
+// related.iterator() invocado automaticamente
+List children = new ArrayList(related);
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html) - objeto para iterar nos resultados da consulta.
 
 ---
