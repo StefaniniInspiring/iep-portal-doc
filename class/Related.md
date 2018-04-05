@@ -144,3 +144,23 @@ entity.getChildren().relatedBetween(beforeYesterday, yesterday);
 
 ---
 
+## offset(n)
+
+Usado para paginação, desconsidera os primeiros n resultados da consulta.
+
+O primeiro elemento é indexado na posição 0.
+
+Exemplo de uso:
+
+```java
+// consulta o 2o filho da entidade
+entity.getChildren().offset(1).next();
+```
+
+### Parâmetros
+* n - número de resultados a serem descartados em uma consulta
+
+### Retorno
+[Related](Related) - este objeto
+
+---
