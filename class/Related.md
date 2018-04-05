@@ -314,7 +314,7 @@ Map<String, Actor> clientePorIdade = loja.getChildrenActors().ofType("cliente").
 ```
 
 ### Parâmetros
-n/a
+* ```String``` name - nome do atributo usado para indexar o resultado.
 
 ### Retorno
 [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)> - o resultado da consulta em um mapa indexado pelo valor de um atributo dos resultados.
