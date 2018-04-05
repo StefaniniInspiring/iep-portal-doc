@@ -272,13 +272,13 @@ n/a
 
 ---
  ## toMap()
- Realiza a consulta, itera nos resultados e os insere em um mapa onde a chave é o ID do ator/entidade e o valor é o ator/entidade em questão.
+ Realiza a consulta, itera nos resultados e os insere em um mapa onde a chave é o ID do ator/entidade e o valor é o respectivo ator/entidade.
  
  Exemplo:
  
 ```java
 // consulta os clientes de uma loja e os insere em um mapa
-Map<String, Actors> clientes = loja.getChildrenActors().ofType("cliente").toMap();
+Map<String, Actor> clientePorId = loja.getChildrenActors().ofType("cliente").toMap();
 ```
 
 ### Parâmetros
@@ -286,5 +286,37 @@ n/a
 
 ### Retorno
 [Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)>] - o resultado da consulta em um mapa indexado pelos identificadores dos resultados.
+
+---
+
+## groupByType()
+Realiza a consulta, itera nos resultados e os insere em um mapa onde a chave é o tipo (configuração) do ator/entidade e o valor é o respectivo ator/entidade.
+
+```java
+// consulta os clientes de uma loja e os insere em um mapa indexado pelo tipo de cada cliente
+Map<String, Actor> clientePorTipo = loja.getChildrenActors().ofType("cliente").groupByType();
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)>] - o resultado da consulta em um mapa indexado pelas configurações dos resultados.
+
+---
+
+## groupByAttr(name)
+Realiza a consulta, itera nos resultados e os insere em um mapa onde a chave é valor de um atributo do ator/entidade e o valor é o respectivo ator/entidade.
+
+```java
+// consulta os clientes de uma loja e os insere em um mapa indexado pela idade de cada cliente
+Map<String, Actor> clientePorIdade = loja.getChildrenActors().ofType("cliente").groupByAttr("idade");
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Map](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)<```String```, [Relatable](Relatable)>] - o resultado da consulta em um mapa indexado pelo valor de um atributo dos resultados.
 
 ---
