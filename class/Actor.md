@@ -3,13 +3,15 @@
 ---
 
 ## getParents()
-Prepara a query para consultar as entidades/atores pais deste ator, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades/atores pais deste ator, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
 
 Exemplo de uso:
 
 ```java
+// constrói o objeto capaz de consultar os pais do ator
+Related parents = actor.getParents();
 // recupera o 1o ator/entidade relacionado com este ator
-Relatable parent = actor.getParents().next();
+Relatable parent = parents.next();
 ```
 
 ```java
@@ -28,13 +30,15 @@ n/a
 ---
 
 ## getParentActors()
-Prepara a query para consultar os atores pais, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores pais deste ator, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
 
 Exemplo de uso:
 
 ```java
+// constrói o objeto capaz de consultar os pais do ator
+Related parents = actor.getParentActors();
 // recupera o 1o ator relacionado com este ator
-Actor parent = actor.getParentActors().next();
+Actor parent = parents.next();
 ```
 
 ```java
@@ -43,7 +47,6 @@ for (Actor parent : actor.getParentActors()) {
     ...
 }
 ```
-
 ### Parâmetros
 n/a
 
