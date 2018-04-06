@@ -2,6 +2,18 @@
 
 ---
 
+* [ofType(types)](#oftypetypes)
+* [relatedOn(date)](#relatedondate)
+* [relatedOnOrAfter(date)](#relatedonorafterdate)
+* [relatedOnOrBefore(date)](#relatedonorbeforedate)
+* [relatedAfter(date)](#relatedafterdate)
+* [relatedBefore(date)](#relatedbeforedate)
+* [relatedBetween(date1, date2)](#relatedbetweendate1_date2)
+* [offset(n)](#offsetn)
+* [limit(n)](#limitn)
+
+---
+
 ## ofType(types)
 
 Filtra os relacionamentos pelo tipo ou configuração da entitade ou ator relacionado.
