@@ -61,3 +61,23 @@ loja.getChildren().ofType("cliente").filter().withAttrLike("nome", "?????");
 [Filter](Filter) - este objeto
 
 ---
+
+## createdOn(date)
+
+Filtra os atores/entidades com data de criação igual a data informada.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes criados no natal de 2015
+Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+loja.getChildren().ofType("cliente").filter().createdOn(natal2015);
+```
+
+### Parâmetros
+* ```Date``` date - data de criação
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
