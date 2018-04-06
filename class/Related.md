@@ -11,6 +11,7 @@
 * [relatedBetween(date1, date2)](#relatedbetweendate1-date2)
 * [offset(n)](#offsetn)
 * [limit(n)](#limitn)
+* [filter()](#filter)
 
 ---
 
