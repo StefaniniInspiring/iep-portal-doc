@@ -317,7 +317,7 @@ Exemplo de uso:
 loja.getChildren().ofType("cliente").filter().not().withAttr("uf", "sp");
 
 // filtra os clientes que contenham o atributo "uf" inciados em "m" mas que não seja "ma"
-loja.getChildren().ofType("cliente").filter().withAttr("uf", "m?").not().withAttr("uf", "ma");
+loja.getChildren().ofType("cliente").filter().not().withAttr("uf", "ma").withAttr("uf", "m?");
 
 // filtra os clientes que NÃO foram criados no natal de 2015
 Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
@@ -332,3 +332,49 @@ n/a
 
 ---
 
+## or()
+
+Aplica um __OR__ entre o filtro invocado anteriormente a este metodo e o filtro invocado na sequencia deste método.
+
+Este método só tem efeito se invocado entre dois outros métodos de filtro.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes que contenham o atributo "uf" com valor "sp" OU "mg"
+loja.getChildren().ofType("cliente").filter().withAttr("uf", "sp").or().withAttr("uf", "mg");
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
+
+## and()
+
+Aplica um __AND__ entre o filtro invocado anteriormente a este metodo e o filtro invocado na sequencia deste método.
+
+Este método só tem efeito se invocado entre dois outros métodos de filtro.
+
+Este método é opcional, o mesmo efeito é obtido ao se invocar dois métodos de filtro em sequencia.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes que contenham o atributo "uf" com valor "sp" E o atributo idade com valor "33"
+loja.getChildren().ofType("cliente").filter().withAttr("uf", "sp").and().withAttr("idade", "33");
+
+// Idem ao exemplo acima, omitindo-se o método and()
+loja.getChildren().ofType("cliente").filter().withAttr("uf", "sp").withAttr("idade", "33");
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
