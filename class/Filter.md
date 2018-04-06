@@ -378,3 +378,51 @@ n/a
 [Filter](Filter) - este objeto
 
 ---
+
+## openBrackets()
+
+Insere os filtros invocados posteriormentes a este método entre um par de parênteses. Utilizado para garantir o resultado de filtros complexos.
+
+Este método deve ser invocado em conjunto com [closeBrackets](#closebrackets).
+
+Caso os parênteses não sejam fechados (não se invocar [closeBrackets](#closebrackets) após este método), todos os filtros invocados após este método serão considerados dentro dos parênteses.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes com nome "João" ou "Maria" e que tenham idade igual a "30" ou "40"
+loja.getChildren().ofType("cliente").filter()
+  .openBrackets().withAttr("nome", "João").or().withAttr("nome", "Maria").closeBrackets()
+  .and()
+  .openBrackets().withAttr("idade", "30").or().withAttr("idade", "40").closeBrackets()
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
+
+## closeBrackets()
+
+Fecha os parênteses abertos pela anterior invocação do método [openBrackets](#openbrackets).
+
+Este método não tem efeito se os parênteses não tenham sido previamente abertos (não se invocar [openBrackets](#openbrackets) antes deste método).
+
+Exemplo de uso:
+
+```java
+// filtra os clientes com nome "João" ou "Maria" e que tenham idade igual a "30" ou "40"
+loja.getChildren().ofType("cliente").filter()
+  .openBrackets().withAttr("nome", "João").or().withAttr("nome", "Maria").closeBrackets()
+  .and()
+  .openBrackets().withAttr("idade", "30").or().withAttr("idade", "40").closeBrackets()
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Filter](Filter) - este objeto
