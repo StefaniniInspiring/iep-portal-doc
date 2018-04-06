@@ -2,6 +2,18 @@
 
 ---
 
+* [getParents()](#getparents)
+* [getParentActors()](#getparentactors)
+* [getParentEntities()](#getparententities)
+* [getSiblings()](#getsiblings)
+* [getSiblingActors()](#getsiblingactors)
+* [getSiblingEntities()](#getsiblingentities)
+* [getChildren()](#getchildren)
+* [getChildrenActors()](#getchildrenactors)
+* [getChildrenEntities()](#getchildrenentities)
+
+---
+
 ## getParents()
 Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades/atores pais deste ator, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
 
