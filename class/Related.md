@@ -8,7 +8,7 @@
 * [relatedOnOrBefore(date)](#relatedonorbeforedate)
 * [relatedAfter(date)](#relatedafterdate)
 * [relatedBefore(date)](#relatedbeforedate)
-* [relatedBetween(date1, date2)](#relatedbetweendate1_date2)
+* [relatedBetween(date1, date2)](#relatedbetweendate1-date2)
 * [offset(n)](#offsetn)
 * [limit(n)](#limitn)
 
