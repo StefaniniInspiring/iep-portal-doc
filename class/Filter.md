@@ -75,7 +75,109 @@ loja.getChildren().ofType("cliente").filter().createdOn(natal2015);
 ```
 
 ### Parâmetros
-* ```Date``` date - data de criação
+* ```Date``` date - data de filtro da criação do ator/entidade.
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
+
+## createdOnOrAfter(date)
+
+Filtra os atores/entidades com data de criação igual ou posterior a data informada.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes criados no natal de 2015 ou posteriormente a esta data
+Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+loja.getChildren().ofType("cliente").filter().createdOnOrAfter(natal2015);
+```
+
+### Parâmetros
+* ```Date``` date - data de filtro da criação do ator/entidade.
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
+
+## createdOnOrBefore(date)
+
+Filtra os atores/entidades com data de criação igual ou anterior a data informada.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes criados no natal de 2015 ou anteriormente a esta data
+Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+loja.getChildren().ofType("cliente").filter().createdOnOrBefore(natal2015);
+```
+
+### Parâmetros
+* ```Date``` date - data de filtro da criação do ator/entidade.
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
+
+## createdAfter(date)
+
+Filtra os atores/entidades com data de criação posterior a data informada.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes criados após o natal de 2015
+Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+loja.getChildren().ofType("cliente").filter().createdAfter(natal2015);
+```
+
+### Parâmetros
+* ```Date``` date - data de filtro da criação do ator/entidade.
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
+
+## createdBefore(date)
+
+Filtra os atores/entidades com data de criação anterior a data informada.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes criados anteriormente ao natal de 2015
+Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+loja.getChildren().ofType("cliente").filter().createdOnOrBefore(natal2015);
+```
+
+### Parâmetros
+* ```Date``` date - data de filtro da criação do ator/entidade.
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
+
+## createdBetween(date1, date2)
+
+Filtra os atores/entidades com data de criação dentro de um período, inclusive.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes criados entre o natal de 2015 e o reveillon de 2016
+Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+Date reveillon2016 = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2016");
+loja.getChildren().ofType("cliente").filter().createdBetween(natal2015, reveillon2016);
+```
+
+### Parâmetros
+* ```Date``` date1 - data inicial do período de filtro da criação do ator/entidade.
+* ```Date``` date2 - data final do período de filtro da criação do ator/entidade.
 
 ### Retorno
 [Filter](Filter) - este objeto
