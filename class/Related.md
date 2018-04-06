@@ -12,6 +12,13 @@
 * [offset(n)](#offsetn)
 * [limit(n)](#limitn)
 * [filter()](#filter)
+* [order()](#order)
+* [count()](#count)
+* [iterator()](#iterator)
+* [toList()](#tolist)
+* [toMap()](#tomap)
+* [groupByType](#groupbytype)
+* [groupByAttr(name)](#groupbyattrname)
 
 ---
 
