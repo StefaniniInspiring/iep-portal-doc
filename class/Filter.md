@@ -3,6 +3,24 @@
 ---
 
 * [withAttr(name, value)](#withattrname-value)
+* [withAttrLike(name, value)](#withattrlikename-value)
+* [createdOn(date)](#createdondate)
+* [createdOnOrAfter(date)](#createdonorafterdate)
+* [createdOnOrBefore(date)](#createdonorbeforedate)
+* [createdAfter(date)](#createdafterdate)
+* [createdBefore(date)](#createdbeforedate)
+* [createdBetween(date1, date2)](#createdbetweendate1-date2)
+* [updatedOn(date)](#updatedondate)
+* [updatedOnOrAfter(date)](#updatedonorafterdate)
+* [updatedOnOrBefore(date)](#updatedonorbeforedate)
+* [updatedAfter(date)](#updatedafterdate)
+* [updatedBefore(date)](#updatedbeforedate)
+* [updatedBetween(date1, date2)](#updatedbetweendate1-date2)
+* [not()](#not)
+* [or()](#or)
+* [and()](#and)
+* [openBrackets()](#openbrackets)
+* [closeBrackets()](#closebrackets)
 
 ---
 
