@@ -305,3 +305,30 @@ loja.getChildren().ofType("cliente").filter().updatedBetween(natal2015, reveillo
 [Filter](Filter) - este objeto
 
 ---
+
+## not()
+
+Nega um único filtro invocado na sequencia deste método.
+
+Exemplo de uso:
+
+```java
+// filtra os clientes que NÃO contenham o atributo "uf" com valor "sp"
+loja.getChildren().ofType("cliente").filter().not().withAttr("uf", "sp");
+
+// filtra os clientes que contenham o atributo "uf" inciados em "m" mas que não seja "ma"
+loja.getChildren().ofType("cliente").filter().withAttr("uf", "m?").not().withAttr("uf", "ma");
+
+// filtra os clientes que NÃO foram criados no natal de 2015
+Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+loja.getChildren().ofType("cliente").filter().not().createdOn(natal2015);
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Filter](Filter) - este objeto
+
+---
+
