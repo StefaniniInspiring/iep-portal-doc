@@ -399,9 +399,13 @@ n/a
 
 ## openBrackets()
 
-Insere os filtros invocados posteriormentes a este método entre um par de parênteses. Utilizado para garantir o resultado de filtros complexos.
+Insere os filtros invocados posteriormentes a este método entre um par de parênteses. 
+
+Utilizado para se garantir a precedência de filtros complexos.
 
 Este método deve ser invocado em conjunto com [closeBrackets](#closebrackets).
+
+Este método não tem efeito se nenhum outro filtro for invocado após este método.
 
 Caso os parênteses não sejam fechados (não se invocar [closeBrackets](#closebrackets) após este método), todos os filtros invocados após este método serão considerados dentro dos parênteses.
 
