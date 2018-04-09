@@ -1,3 +1,3 @@
 # Tópicos
-* [Ator](topic/Actor#ajuda)
-* [Entidade](topic/Entity#ajuda)
+* [Ator](topic/Actor)
+* [Entidade](topic/Entity)
