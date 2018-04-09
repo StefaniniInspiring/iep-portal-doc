@@ -3,6 +3,12 @@
 
 ---
 
+* [byId()](#byid)
+* [byAttr(name)](#byattrname)
+* [byCreateDate()](#bycreatedate)
+* [byUpdateDate()](#byupdatedate)
+* [desc()](#desc)
+
 ---
 
 ## byId()
