@@ -9,6 +9,8 @@
 
 Ordena os atores/entidades resultantes de uma consulta pelo seu respectivo identificador único.
 
+A ordenação é crescente, para ordenar de forma decrescente, deve-se invocar o método [desc()](#desc) logo após este método.
+
 Exemplo de uso:
 
 ```java
@@ -28,6 +30,8 @@ n/a
 
 Ordena os atores/entidades resultantes de uma consulta pelo valor de um atributo específico.
 
+A ordenação é crescente, para ordenar de forma decrescente, deve-se invocar o método [desc()](#desc) logo após este método.
+
 Exemplo de uso:
 
 ```java
@@ -36,7 +40,7 @@ loja.getChildren().ofType("cliente").order().byAttr("nome");
 ```
 
 ## Parâmetros
-* ```String``` nome - nome do atributo usado para ordenação
+* ```String``` name - nome do atributo usado para ordenação
 
 ### Retorno
 [Order](Order) - este objeto
@@ -46,6 +50,8 @@ loja.getChildren().ofType("cliente").order().byAttr("nome");
 ## byCreateDate()
 
 Ordena os atores/entidades resultantes de uma consulta pela respectiva data de criação.
+
+A ordenação é crescente, para ordenar de forma decrescente, deve-se invocar o método [desc()](#desc) logo após este método.
 
 Exemplo de uso:
 
@@ -66,6 +72,8 @@ n/a
 
 Ordena os atores/entidades resultantes de uma consulta pela respectiva data de última atualização.
 
+A ordenação é crescente, para ordenar de forma decrescente, deve-se invocar o método [desc()](#desc) logo após este método.
+
 Exemplo de uso:
 
 ```java
@@ -83,3 +91,19 @@ n/a
 
 ## desc()
 
+Torna a ordenação invocada anterior a este método no sentido decrescente.
+
+Exemplo de uso:
+
+```java
+// ordena os clientes pelo atributo "nome" de forma decrescente
+loja.getChildren().ofType("cliente").order().byAttr("nome").desc();
+```
+
+### Parâmetros
+n/a
+
+### Retorno
+[Order](Order) - este objeto
+
+---
