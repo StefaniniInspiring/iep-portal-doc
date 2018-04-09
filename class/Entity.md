@@ -1,4 +1,4 @@
-# Métodos da classe Actor
+# Métodos da classe Entity
 
 ---
 
@@ -15,20 +15,20 @@
 ---
 
 ## getParents()
-Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades/atores pais deste ator, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades/atores pais desta entidade, ou seja, que possuem um relacionamento bidirecional ou unidirecional com esta entidade.
 
 Exemplo de uso:
 
 ```java
-// constrói o objeto capaz de consultar os pais do ator
-Related parents = actor.getParents();
-// recupera o 1o ator/entidade relacionado com este ator
+// constrói o objeto capaz de consultar os pais da entidade
+Related parents = entity.getParents();
+// recupera o 1o ator/entidade relacionado com esta entidade
 Relatable parent = parents.next();
 ```
 
 ```java
-// itera nas nos atores/entidades relacionados com este ator
-for (Relatable parent : actor.getParents()) {
+// itera nas nos atores/entidades relacionados com esta entidade
+for (Relatable parent : entity.getParents()) {
     ...
 }
 ```
@@ -37,25 +37,25 @@ for (Relatable parent : actor.getParents()) {
 n/a
 
 ### Retorno
-[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades e atores relacionados com este ator
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades e atores relacionados com esta entidade
 
 ---
 
 ## getParentActors()
-Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores pais deste ator, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores pais desta entidade, ou seja, que possuem um relacionamento bidirecional ou unidirecional com esta entidade.
 
 Exemplo de uso:
 
 ```java
-// constrói o objeto capaz de consultar os pais do ator
-Related parents = actor.getParentActors();
-// recupera o 1o ator relacionado com este ator
+// constrói o objeto capaz de consultar os pais da entidade
+Related parents = entity.getParentActors();
+// recupera o 1o ator relacionado com esta entidade
 Actor parent = parents.next();
 ```
 
 ```java
-// itera nas nos atores relacionados com este ator
-for (Actor parent : actor.getParentActors()) {
+// itera nas nos atores relacionados com esta entidade
+for (Actor parent : entity.getParentActors()) {
     ...
 }
 ```
@@ -63,25 +63,25 @@ for (Actor parent : actor.getParentActors()) {
 n/a
 
 ### Retorno
-[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar atores relacionados com este ator
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar atores relacionados com esta entidade
 
 ---
 
 ## getParentEntities()
-Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades pais deste ator, ou seja, que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades pais desta entidade, ou seja, que possuem um relacionamento bidirecional ou unidirecional com esta entidade.
 
 Exemplo de uso:
 
 ```java
-// constrói o objeto capaz de consultar os pais do ator
-Related parents = actor.getParentEntities();
-// recupera a 1a entidade relacionada com este ator
+// constrói o objeto capaz de consultar os pais da entidade
+Related parents = entity.getParentEntities();
+// recupera a 1a entidade relacionada com esta entidade
 Entity parent = parents.next();
 ```
 
 ```java
-// itera nas nas entidades relacionadas com este ator
-for (Entity parent : actor.getParentEntities()) {
+// itera nas nas entidades relacionadas com esta entidade
+for (Entity parent : entity.getParentEntities()) {
     ...
 }
 ```
@@ -89,25 +89,25 @@ for (Entity parent : actor.getParentEntities()) {
 n/a
 
 ### Retorno
-[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades relacionadas com este ator
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades relacionadas com esta entidade
 
 ---
 
 ## getSiblings()
-Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores/entidades irmãos deste ator, ou seja, que são relacionadas com entidades que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores/entidades irmãos desta entidade, ou seja, que são relacionadas com entidades que possuem um relacionamento bidirecional ou unidirecional com esta entidade.
 
 Exemplo de uso:
 
 ```java
-// constrói o objeto capaz de consultar os irmãos do ator
-Related siblings = actor.getSiblings();
-// recupera o 1o irmão deste ator
+// constrói o objeto capaz de consultar os irmãos da entidade
+Related siblings = entity.getSiblings();
+// recupera o 1o irmão desta entidade
 Relatable sibling = siblings.next();
 ```
 
 ```java
-// itera nas nos atores/entidades irmãos deste ator
-for (Relatable sibling : actor.getSiblings()) {
+// itera nas nos atores/entidades irmãos desta entidade
+for (Relatable sibling : entity.getSiblings()) {
     ...
 }
 ```
@@ -115,25 +115,25 @@ for (Relatable sibling : actor.getSiblings()) {
 n/a
 
 ### Retorno
-[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar atores/entidades irmãos deste ator
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar atores/entidades irmãos desta entidade
 
 ---
 
 ## getSiblingActors()
-Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores irmãos deste ator, ou seja, que são relacionadas com entidades que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores irmãos desta entidade, ou seja, que são relacionadas com entidades que possuem um relacionamento bidirecional ou unidirecional com esta entidade.
 
 Exemplo de uso:
 
 ```java
-// constrói o objeto capaz de consultar os irmãos do ator
-Related siblings = actor.getSiblingActors();
-// recupera o 1o irmão deste ator
+// constrói o objeto capaz de consultar os irmãos da entidade
+Related siblings = entity.getSiblingActors();
+// recupera o 1o irmão desta entidade
 Actor sibling = siblings.next();
 ```
 
 ```java
-// itera nas nos atores irmãos deste ator
-for (Actor sibling : actor.getSiblingActors()) {
+// itera nas nos atores irmãos desta entidade
+for (Actor sibling : entity.getSiblingActors()) {
     ...
 }
 ```
@@ -141,25 +141,25 @@ for (Actor sibling : actor.getSiblingActors()) {
 n/a
 
 ### Retorno
-[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar atores irmãos deste ator
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar atores irmãos desta entidade
 
 ---
 
 ## getSiblingEntities()
-Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades irmãs deste ator, ou seja, que são relacionadas com entidades que possuem um relacionamento bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades irmãs desta entidade, ou seja, que são relacionadas com entidades que possuem um relacionamento bidirecional ou unidirecional com esta entidade.
 
 Exemplo de uso:
 
 ```java
-// constrói o objeto capaz de consultar os irmãos do ator
-Related siblings = actor.getSiblingEntities();
-// recupera o 1o irmão deste ator
+// constrói o objeto capaz de consultar os irmãos da entidade
+Related siblings = entity.getSiblingEntities();
+// recupera o 1o irmão desta entidade
 Entity sibling = siblings.next();
 ```
 
 ```java
-// itera nas nas entidades irmãs deste ator
-for (Entity sibling : actor.getSiblingEntities()) {
+// itera nas nas entidades irmãs desta entidade
+for (Entity sibling : entity.getSiblingEntities()) {
     ...
 }
 ```
@@ -167,25 +167,25 @@ for (Entity sibling : actor.getSiblingEntities()) {
 n/a
 
 ### Retorno
-[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades irmãs deste ator
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades irmãs desta entidade
 
 ---
 
 ## getChildren()
-Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores/entidades filhos deste ator, ou seja, que são relacionadas de forma bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores/entidades filhos desta entidade, ou seja, que são relacionadas de forma bidirecional ou unidirecional com esta entidade.
 
 Exemplo de uso:
 
 ```java
-// constrói o objeto capaz de consultar os filhos do ator
-Related children = actor.getChildren();
-// recupera o 1o ator/entidade filho deste ator
+// constrói o objeto capaz de consultar os filhos da entidade
+Related children = entity.getChildren();
+// recupera o 1o ator/entidade filho desta entidade
 Relatable child = children.next();
 ```
 
 ```java
-// itera nas nos atores/entidades filhos deste ator
-for (Relatable child : actor.getChildren()) {
+// itera nas nos atores/entidades filhos desta entidade
+for (Relatable child : entity.getChildren()) {
     ...
 }
 ```
@@ -194,25 +194,25 @@ for (Relatable child : actor.getChildren()) {
 n/a
 
 ### Retorno
-[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades e atores filhos deste ator
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades e atores filhos desta entidade
 
 ---
 
 ## getChildrenActors()
-Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores filhos deste ator, ou seja, que são relacionadas de forma bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta os atores filhos desta entidade, ou seja, que são relacionadas de forma bidirecional ou unidirecional com esta entidade.
 
 Exemplo de uso:
 
 ```java
-// constrói o objeto capaz de consultar os filhos do ator
-Related children = actor.getChildrenActors();
-// recupera o 1o ator filho deste ator
+// constrói o objeto capaz de consultar os filhos da entidade
+Related children = entity.getChildrenActors();
+// recupera o 1o ator filho desta entidade
 Actor child = children.next();
 ```
 
 ```java
-// itera nas nos atores filhos deste ator
-for (Actor child : actor.getChildrenActors()) {
+// itera nas nos atores filhos desta entidade
+for (Actor child : entity.getChildrenActors()) {
     ...
 }
 ```
@@ -221,25 +221,25 @@ for (Actor child : actor.getChildrenActors()) {
 n/a
 
 ### Retorno
-[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar atores filhos deste ator
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar atores filhos desta entidade.
 
 ---
 
 ## getChildrenEntities()
-Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades filhas deste ator, ou seja, que são relacionadas de forma bidirecional ou unidirecional com este ator.
+Constrói um objeto do tipo [Related](Related) que quando iterado consulta as entidades filhas desta entidade, ou seja, que são relacionadas de forma bidirecional ou unidirecional com esta entidade.
 
 Exemplo de uso:
 
 ```java
-// constrói o objeto capaz de consultar os filhos do ator
-Related children = actor.getChildrenEntities();
-// recupera a 1a entidade filha deste ator
+// constrói o objeto capaz de consultar os filhos da entidade
+Related children = entity.getChildrenEntities();
+// recupera a 1a entidade filha desta entidade
 Entity child = children.next();
 ```
 
 ```java
-// itera nas nas entidades filhas deste ator
-for (Entity child : actor.getChildrenEntities()) {
+// itera nas nas entidades filhas desta entidade
+for (Entity child : entity.getChildrenEntities()) {
     ...
 }
 ```
@@ -248,7 +248,6 @@ for (Entity child : actor.getChildrenEntities()) {
 n/a
 
 ### Retorno
-[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades filhas deste ator
+[Related](Related) - um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) que contém a query para consultar entidades filhas desta entidade
 
 ---
-
