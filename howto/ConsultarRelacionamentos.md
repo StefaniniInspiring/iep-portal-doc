@@ -2,7 +2,7 @@
 
 ## O que são relacionamentos
 
-Relacionamentos são ligações entre entitdades e atores.
+Relacionamentos são ligações entre entitades e atores que possuem uma afinidade conceitual.
 
 Entidades podem ser relacionadas com outras entidades ou atores.
 
@@ -15,7 +15,8 @@ Exitem 2 tipos de relacionamentos: bidirecional e unidirecional
 Em um relacionamento bidirecional, cada uma das partes possui um relacionamento com a outra parte, ou seja, o relacionamento é reconhecido por seus 2 integrantes.
 
 No exemplo abaixo, a entitdade/ator **A** possui um relacionamento com a entitade/ator **B**. De forma análoga, **B** possui uma relacionamento com **A**:
- ```
+
+```
 A <====> B
 ```
 
@@ -29,5 +30,6 @@ A ----> B
 ```
 
 ## Hierarquia
+
 
 ## Consulta de relacionamentos
