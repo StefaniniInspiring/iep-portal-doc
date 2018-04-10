@@ -30,6 +30,13 @@ A ----> B
 ```
 
 ## Hierarquia
+Um conjunto de entidades/atores relacionados entre si pode ser visto como uma árvore genealógica:
+```
+    A
+    /\
+   /  \
+```
 
+Porém a relação de parentesco é diferente da forma como conhecemos.
 
 ## Consulta de relacionamentos
