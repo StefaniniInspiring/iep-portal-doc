@@ -33,6 +33,7 @@ Um conjunto de entidades/atores relacionados entre si pode ser visto como uma á
 Na imagem acima, **A** é pai de **B** e **C**, **B** e **C** são irmãos.
 
 Porém, como as entidades podem se relacionar livremente, a relação de parentesco pode se tornar complexa, ficando um pouco diferente da forma como conhecemos:
+
 ![Imagem 4](../image/rel4.png)
 
 Na imagem acima, temos os mesmos graus de parentescos da imagem anterior, porém com uma peculiaridadade: **B** além de irmão de **C**, também é pai **C**. Assim como **C** além de irmão de **B**, pode ser visto como filho deste.
