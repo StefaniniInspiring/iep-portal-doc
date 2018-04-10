@@ -8,7 +8,7 @@ Entidades podem ser relacionadas com outras entidades ou atores.
 
 Atores apenas podem se relacionar com entidades.
 
-## Tipos de relacionamentos
+## Direção
 Exitem 2 tipos de relacionamentos: bidirecional e unidirecional
 
 ### Bidirecional
@@ -19,7 +19,7 @@ No exemplo abaixo, a entitdade/ator **A** possui um relacionamento com a entitad
 ![Imagem 1](../image/rel1.png)
 
 ### Unidirecional
-No relacionamento unidirecional, apenas uma das partes conhece o relacionamento, ficando a outra parte alheia ao relacionamento.
+No relacionamento unidirecional, apenas uma das partes conhece o relacionamento, ficando a outra parte alheia.
 
 No exemplo abaixo, a entidade/ator **A** possui um relacionamento com a entidade/ator **B**, porém esta NÃO possui relacionamento com **A**:
 
@@ -36,7 +36,7 @@ Porém, como as entidades podem se relacionar livremente, a relação de parente
 
 ![Imagem 4](../image/rel4.png)
 
-Na imagem acima, temos os mesmos graus de parentescos da imagem anterior, porém com uma peculiaridadade: **B** além de irmão de **C**, também é pai **C**. Assim como **C** além de irmão de **B**, pode ser visto como filho deste.
+Na imagem acima, temos os mesmos graus de parentescos da imagem anterior, porém com uma peculiaridadade: **B** além de irmão de **C**, também é pai de **C**. Assim como **C** além de irmão de **B**, pode ser visto como filho deste.
 
 A hierarquia pode se tornar mais complexa com relacionamentos bidirecionais:
 
