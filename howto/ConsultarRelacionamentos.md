@@ -31,11 +31,8 @@ A ----> B
 
 ## Hierarquia
 Um conjunto de entidades/atores relacionados entre si pode ser visto como uma árvore genealógica:
-```
-    A
-    /\
-   /  \
-```
+![](../image/rel3.png)
+*A pai de B e C, B irmão de C*
 
 Porém a relação de parentesco é diferente da forma como conhecemos.
 
