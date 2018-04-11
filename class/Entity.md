@@ -21,14 +21,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os pais da entidade
-Related parents = entity.getParents();
+parents = entity.getParents();
 // recupera o 1o ator/entidade relacionado com esta entidade
-Relatable parent = parents.next();
+parent = parents.next();
 ```
 
 ```java
 // itera nas nos atores/entidades relacionados com esta entidade
-for (Relatable parent : entity.getParents()) {
+for (parent : entity.getParents()) {
     ...
 }
 ```
@@ -48,14 +48,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os pais da entidade
-Related parents = entity.getParentActors();
+parents = entity.getParentActors();
 // recupera o 1o ator relacionado com esta entidade
-Actor parent = parents.next();
+parent = parents.next();
 ```
 
 ```java
 // itera nas nos atores relacionados com esta entidade
-for (Actor parent : entity.getParentActors()) {
+for (parent : entity.getParentActors()) {
     ...
 }
 ```
@@ -74,14 +74,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os pais da entidade
-Related parents = entity.getParentEntities();
+parents = entity.getParentEntities();
 // recupera a 1a entidade relacionada com esta entidade
-Entity parent = parents.next();
+parent = parents.next();
 ```
 
 ```java
 // itera nas nas entidades relacionadas com esta entidade
-for (Entity parent : entity.getParentEntities()) {
+for (parent : entity.getParentEntities()) {
     ...
 }
 ```
@@ -100,14 +100,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os irmãos da entidade
-Related siblings = entity.getSiblings();
+siblings = entity.getSiblings();
 // recupera o 1o irmão desta entidade
-Relatable sibling = siblings.next();
+sibling = siblings.next();
 ```
 
 ```java
 // itera nas nos atores/entidades irmãos desta entidade
-for (Relatable sibling : entity.getSiblings()) {
+for (sibling : entity.getSiblings()) {
     ...
 }
 ```
@@ -126,14 +126,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os irmãos da entidade
-Related siblings = entity.getSiblingActors();
+siblings = entity.getSiblingActors();
 // recupera o 1o irmão desta entidade
-Actor sibling = siblings.next();
+sibling = siblings.next();
 ```
 
 ```java
 // itera nas nos atores irmãos desta entidade
-for (Actor sibling : entity.getSiblingActors()) {
+for (sibling : entity.getSiblingActors()) {
     ...
 }
 ```
@@ -152,14 +152,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os irmãos da entidade
-Related siblings = entity.getSiblingEntities();
+siblings = entity.getSiblingEntities();
 // recupera o 1o irmão desta entidade
-Entity sibling = siblings.next();
+sibling = siblings.next();
 ```
 
 ```java
 // itera nas nas entidades irmãs desta entidade
-for (Entity sibling : entity.getSiblingEntities()) {
+for (sibling : entity.getSiblingEntities()) {
     ...
 }
 ```
@@ -178,14 +178,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os filhos da entidade
-Related children = entity.getChildren();
+children = entity.getChildren();
 // recupera o 1o ator/entidade filho desta entidade
-Relatable child = children.next();
+child = children.next();
 ```
 
 ```java
 // itera nas nos atores/entidades filhos desta entidade
-for (Relatable child : entity.getChildren()) {
+for (child : entity.getChildren()) {
     ...
 }
 ```
@@ -205,14 +205,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os filhos da entidade
-Related children = entity.getChildrenActors();
+children = entity.getChildrenActors();
 // recupera o 1o ator filho desta entidade
-Actor child = children.next();
+child = children.next();
 ```
 
 ```java
 // itera nas nos atores filhos desta entidade
-for (Actor child : entity.getChildrenActors()) {
+for (child : entity.getChildrenActors()) {
     ...
 }
 ```
@@ -232,14 +232,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os filhos da entidade
-Related children = entity.getChildrenEntities();
+children = entity.getChildrenEntities();
 // recupera a 1a entidade filha desta entidade
-Entity child = children.next();
+child = children.next();
 ```
 
 ```java
 // itera nas nas entidades filhas desta entidade
-for (Entity child : entity.getChildrenEntities()) {
+for (child : entity.getChildrenEntities()) {
     ...
 }
 ```
