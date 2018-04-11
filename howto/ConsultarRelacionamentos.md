@@ -57,7 +57,7 @@ Abaixo temos uma visão expandida de todos os métodos que podem ser usados em u
 * entity
   * [getParents()](../class/Entity#getparents)
   * [getParentActors()](../class/Entity#getparentactors)
-  * [getParentEntities]()](../class/Entity#getparententities)
+  * [getParentEntities()](../class/Entity#getparententities)
   * [getSiblings()](../class/Entity#getsiblings)
   * [getSiblingActors()](../class/Entity#getsiblingactors)
   * [getSiblingEntities()](../class/Entity#getsiblingentities)
@@ -74,7 +74,7 @@ Abaixo temos uma visão expandida de todos os métodos que podem ser usados em u
     * [offset(n)](../class/Entity#offsetn)
     * [limit(n)](../class/Entity#limitn)
     * [filter()](../class/Entity#filter)
-      * [withAttr(name, value)](../class/Entity#)(../class/Entity#withattrname_value)
+      * [withAttr(name, value)](../class/Entity#withattrname_value)
       * [withAttrLike(name, value)](../class/Entity#withattrlikename_value)
       * [createdOn(date)](../class/Entity#createdondate)
       * [createdOnOrAfter(date)](../class/Entity#createdonorafterdate)
