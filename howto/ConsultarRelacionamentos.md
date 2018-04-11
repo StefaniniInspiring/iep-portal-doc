@@ -49,4 +49,5 @@ O conceito de hierarquia de parentesco (pai, filho e irmão) é utilizado como p
 
 Deve-se levar em conta a liberdade que as entidades/atores tem de se relacionar entre si e a direção do relacionamento ao se realizar uma busca, para assim, evitar resultados inesperados.
 
-## Consulta de relacionamentos
+## Consulta
+A partir de uma instância de ator ou entidade, é possível navegar por toda [hierarquia](#hierarquia) de relacionamentos deste objeto e selecionar os relacionamentos que atendem a um certo critério.
