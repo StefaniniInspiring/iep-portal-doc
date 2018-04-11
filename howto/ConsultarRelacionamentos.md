@@ -54,10 +54,10 @@ A partir de uma instância de ator ou entidade, é possível navegar por toda [h
 
 Abaixo temos uma visão expandida de todos os métodos que podem ser usados em uma consulta:
 
-entity
+* entity
   * [getParents()](../class/Entity#getparents)
   * [getParentActors()](../class/Entity#getparentactors)
-  * [getParentEntities]()](../class/Entity#getparententities)
+  * [getParentEntities()](../class/Entity#getparententities)
   * [getSiblings()](../class/Entity#getsiblings)
   * [getSiblingActors()](../class/Entity#getsiblingactors)
   * [getSiblingEntities()](../class/Entity#getsiblingentities)
@@ -104,5 +104,5 @@ entity
   * [toList()](../class/Related#tolist)
   * [toMap()](../class/Related#tomap)
   * [groupByType()](../class/Related#groupbytype)
-  * [groupByAttr(name)](../class/Related#groupbyattrname
+  * [groupByAttr(name)](../class/Related#groupbyattrname)
   
