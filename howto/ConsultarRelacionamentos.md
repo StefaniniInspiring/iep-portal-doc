@@ -51,3 +51,5 @@ Deve-se levar em conta a liberdade que as entidades/atores tem de se relacionar 
 
 ## Consulta
 A partir de uma instância de ator ou entidade, é possível navegar por toda [hierarquia](#hierarquia) de relacionamentos deste objeto e selecionar os relacionamentos que atendem a um certo critério.
+
+Os métodos que podem ser usados para consulta são:
