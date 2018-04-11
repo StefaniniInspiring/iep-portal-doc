@@ -54,8 +54,8 @@ A partir de uma instância de ator ou entidade, é possível navegar por toda [h
 
 Abaixo temos uma visão expandida de todos os métodos que podem ser usados em uma consulta:
 
-entity
-  * getParents()
+* entity
+  * [getParents()](../classes/Entity#getparentactors)
   * getParentActors()
   * getParentEntities()
   * getSiblings()
