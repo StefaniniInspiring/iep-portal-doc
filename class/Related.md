@@ -51,7 +51,7 @@ Exemplo de uso:
 
 ```java
 // filtra os relacionamentos que foram criados ontem
-Date yesterday = DateUtils.addDays(new Date(), -1);
+yesterday = DateUtils.addDays(new Date(), -1);
 entity.getChildren().relatedOn(yesterday);
 ```
 
@@ -71,7 +71,7 @@ Exemplo de uso:
 
 ```java
 // filtra os relacionamentos que foram criados desde ontem
-Date yesterday = DateUtils.addDays(new Date(), -1);
+yesterday = DateUtils.addDays(new Date(), -1);
 entity.getChildren().relatedOnOrAfter(yesterday);
 ```
 
@@ -91,7 +91,7 @@ Exemplo de uso:
 
 ```java
 // filtra os relacionamentos que foram criados ontem ou anteriormente
-Date yesterday = DateUtils.addDays(new Date(), -1);
+yesterday = DateUtils.addDays(new Date(), -1);
 entity.getChildren().relatedOnOrBefore(yesterday);
 ```
 
@@ -111,7 +111,7 @@ Exemplo de uso:
 
 ```java
 // filtra os relacionamentos que foram criados após a data de ontem
-Date yesterday = DateUtils.addDays(new Date(), -1);
+yesterday = DateUtils.addDays(new Date(), -1);
 entity.getChildren().relatedAfter(yesterday);
 ```
 
@@ -131,7 +131,7 @@ Exemplo de uso:
 
 ```java
 // filtra os relacionamentos que foram criados antes de ontem
-Date yesterday = DateUtils.addDays(new Date(), -1);
+yesterday = DateUtils.addDays(new Date(), -1);
 entity.getChildren().relatedBefore(yesterday);
 ```
 
@@ -151,8 +151,8 @@ Exemplo de uso:
 
 ```java
 // filtra os relacionamentos que foram criados entre antes de ontem e ontem
-Date yesterday = DateUtils.addDays(new Date(), -1);
-Date beforeYesterday = DateUtils.addDays(yersterday, -1);
+yesterday = DateUtils.addDays(new Date(), -1);
+beforeYesterday = DateUtils.addDays(yersterday, -1);
 entity.getChildren().relatedBetween(beforeYesterday, yesterday);
 ```
 
@@ -236,7 +236,7 @@ Exemplo de uso:
 
 ```java
 // contar a quantidade de clientes de uma loja
-long clientes = loja.getChildren().ofType("cliente").count();
+totalDeClientes = loja.getChildren().ofType("cliente").count();
 ```
 
 ### Parâmetros
@@ -254,15 +254,15 @@ Retorna o [Iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Iterato
 Este método é chamado automaticamente em uma iteração ou quando este objeto é usado no construtor de uma [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html):
 
 ```java
-Related related = loja.getChildren();
+related = loja.getChildren();
 
 // related.iterator() invocado automaticamente
-for(Entity entity : related) { 
+for(entity : related) { 
   ...
 }
 
 // related.iterator() invocado automaticamente
-List children = new ArrayList(related);
+childList = new ArrayList(related);
 ```
 
 ### Parâmetros
@@ -281,7 +281,7 @@ Exemplo:
 
 ```java
 // consulta os clientes de uma loja e os insere em uma lista
-List<Actors> clientes = loja.getChildrenActors().ofType("cliente").toList();
+listaDeClientes = loja.getChildrenActors().ofType("cliente").toList();
 ```
 
 ### Parâmetros
@@ -298,7 +298,7 @@ n/a
  
 ```java
 // consulta os clientes de uma loja e os insere em um mapa
-Map<String, Actor> clientePorId = loja.getChildrenActors().ofType("cliente").toMap();
+clientePorId = loja.getChildrenActors().ofType("cliente").toMap();
 ```
 
 ### Parâmetros
@@ -314,7 +314,7 @@ Realiza a consulta, itera nos resultados e os insere em um mapa onde a chave é 
 
 ```java
 // consulta os clientes de uma loja e os insere em um mapa indexado pelo tipo de cada cliente
-Map<String, Actor> clientePorTipo = loja.getChildrenActors().ofType("cliente").groupByType();
+clientePorTipo = loja.getChildrenActors().ofType("cliente").groupByType();
 ```
 
 ### Parâmetros
@@ -330,7 +330,7 @@ Realiza a consulta, itera nos resultados e os insere em um mapa onde a chave é 
 
 ```java
 // consulta os clientes de uma loja e os insere em um mapa indexado pela idade de cada cliente
-Map<String, Actor> clientePorIdade = loja.getChildrenActors().ofType("cliente").groupByAttr("idade");
+clientePorIdade = loja.getChildrenActors().ofType("cliente").groupByAttr("idade");
 ```
 
 ### Parâmetros
