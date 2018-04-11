@@ -88,7 +88,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes criados no natal de 2015
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().createdOn(natal2015);
 ```
 
@@ -108,7 +108,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes criados no natal de 2015 ou posteriormente a esta data
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().createdOnOrAfter(natal2015);
 ```
 
@@ -128,7 +128,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes criados no natal de 2015 ou anteriormente a esta data
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().createdOnOrBefore(natal2015);
 ```
 
@@ -148,7 +148,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes criados após o natal de 2015
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().createdAfter(natal2015);
 ```
 
@@ -168,7 +168,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes criados anteriormente ao natal de 2015
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().createdBefore(natal2015);
 ```
 
@@ -188,8 +188,8 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes criados entre o natal de 2015 e o reveillon de 2016
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
-Date reveillon2016 = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2016");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+reveillon2016 = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2016");
 loja.getChildren().ofType("cliente").filter().createdBetween(natal2015, reveillon2016);
 ```
 
@@ -210,7 +210,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes atualizados no natal de 2015
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().updatedOn(natal2015);
 ```
 
@@ -230,7 +230,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes atualizados no natal de 2015 ou posteriormente a esta data
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().updatedOnOrAfter(natal2015);
 ```
 
@@ -250,7 +250,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes atualizados no natal de 2015 ou anteriormente a esta data
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().updatedOnOrBefore(natal2015);
 ```
 
@@ -270,7 +270,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes atualizados após o natal de 2015
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().updatedAfter(natal2015);
 ```
 
@@ -290,7 +290,7 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes atualizados anteriormente ao natal de 2015
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().updateBefore(natal2015);
 ```
 
@@ -310,8 +310,8 @@ Exemplo de uso:
 
 ```java
 // filtra os clientes atualizados entre o natal de 2015 e o reveillon de 2016
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
-Date reveillon2016 = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2016");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+reveillon2016 = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2016");
 loja.getChildren().ofType("cliente").filter().updatedBetween(natal2015, reveillon2016);
 ```
 
@@ -338,7 +338,7 @@ loja.getChildren().ofType("cliente").filter().not().withAttr("uf", "sp");
 loja.getChildren().ofType("cliente").filter().not().withAttr("uf", "ma").withAttr("uf", "m?");
 
 // filtra os clientes que NÃO foram criados no natal de 2015
-Date natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
+natal2015 = new SimpleDateFormat("dd/MM/yyyy").parse("25/12/2015");
 loja.getChildren().ofType("cliente").filter().not().createdOn(natal2015);
 ```
 
