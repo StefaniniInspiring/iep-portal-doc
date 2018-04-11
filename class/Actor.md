@@ -21,14 +21,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os pais do ator
-Related parents = actor.getParents();
+parents = actor.getParents();
 // recupera o 1o ator/entidade relacionado com este ator
-Relatable parent = parents.next();
+parent = parents.next();
 ```
 
 ```java
 // itera nas nos atores/entidades relacionados com este ator
-for (Relatable parent : actor.getParents()) {
+for (parent : actor.getParents()) {
     ...
 }
 ```
@@ -48,14 +48,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os pais do ator
-Related parents = actor.getParentActors();
+parents = actor.getParentActors();
 // recupera o 1o ator relacionado com este ator
-Actor parent = parents.next();
+parent = parents.next();
 ```
 
 ```java
 // itera nas nos atores relacionados com este ator
-for (Actor parent : actor.getParentActors()) {
+for (parent : actor.getParentActors()) {
     ...
 }
 ```
@@ -74,14 +74,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os pais do ator
-Related parents = actor.getParentEntities();
+parents = actor.getParentEntities();
 // recupera a 1a entidade relacionada com este ator
-Entity parent = parents.next();
+parent = parents.next();
 ```
 
 ```java
 // itera nas nas entidades relacionadas com este ator
-for (Entity parent : actor.getParentEntities()) {
+for (parent : actor.getParentEntities()) {
     ...
 }
 ```
@@ -100,14 +100,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os irmãos do ator
-Related siblings = actor.getSiblings();
+siblings = actor.getSiblings();
 // recupera o 1o irmão deste ator
-Relatable sibling = siblings.next();
+sibling = siblings.next();
 ```
 
 ```java
 // itera nas nos atores/entidades irmãos deste ator
-for (Relatable sibling : actor.getSiblings()) {
+for (sibling : actor.getSiblings()) {
     ...
 }
 ```
@@ -126,14 +126,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os irmãos do ator
-Related siblings = actor.getSiblingActors();
+siblings = actor.getSiblingActors();
 // recupera o 1o irmão deste ator
-Actor sibling = siblings.next();
+sibling = siblings.next();
 ```
 
 ```java
 // itera nas nos atores irmãos deste ator
-for (Actor sibling : actor.getSiblingActors()) {
+for (sibling : actor.getSiblingActors()) {
     ...
 }
 ```
@@ -152,14 +152,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os irmãos do ator
-Related siblings = actor.getSiblingEntities();
+siblings = actor.getSiblingEntities();
 // recupera o 1o irmão deste ator
-Entity sibling = siblings.next();
+sibling = siblings.next();
 ```
 
 ```java
 // itera nas nas entidades irmãs deste ator
-for (Entity sibling : actor.getSiblingEntities()) {
+for (sibling : actor.getSiblingEntities()) {
     ...
 }
 ```
@@ -178,14 +178,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os filhos do ator
-Related children = actor.getChildren();
+children = actor.getChildren();
 // recupera o 1o ator/entidade filho deste ator
-Relatable child = children.next();
+child = children.next();
 ```
 
 ```java
 // itera nas nos atores/entidades filhos deste ator
-for (Relatable child : actor.getChildren()) {
+for (child : actor.getChildren()) {
     ...
 }
 ```
@@ -205,14 +205,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os filhos do ator
-Related children = actor.getChildrenActors();
+children = actor.getChildrenActors();
 // recupera o 1o ator filho deste ator
-Actor child = children.next();
+child = children.next();
 ```
 
 ```java
 // itera nas nos atores filhos deste ator
-for (Actor child : actor.getChildrenActors()) {
+for (child : actor.getChildrenActors()) {
     ...
 }
 ```
@@ -232,14 +232,14 @@ Exemplo de uso:
 
 ```java
 // constrói o objeto capaz de consultar os filhos do ator
-Related children = actor.getChildrenEntities();
+children = actor.getChildrenEntities();
 // recupera a 1a entidade filha deste ator
-Entity child = children.next();
+child = children.next();
 ```
 
 ```java
 // itera nas nas entidades filhas deste ator
-for (Entity child : actor.getChildrenEntities()) {
+for (child : actor.getChildrenEntities()) {
     ...
 }
 ```
