@@ -166,7 +166,7 @@ Os primeiros filtros que podem ser aplicados se referem aos relacionamentos do o
 
 > :exclamation: **Atenção!**
 >
-> Não confundir com [filtros de relacionáveis](#filtros-de-relacionaveis). Aqui são considerados os aspectos do relacionamento em si enquanto o outro visa as contrapartes deste relacionamento.
+> Não confundir com [filtros de relacionáveis](#filtros-de-relacionáveis). Aqui são considerados os aspectos do relacionamento em si enquanto o outro visa as contrapartes deste relacionamento.
 
 Os métodos são:
 
@@ -209,16 +209,21 @@ São filtros usados para selecionar os atores ou entidades relacionadas.
 > Não confundir com [filtros de relacionamentos](#filtros-de-relacionamentos). Aqui são consideradas as contrapartes de um  relacionamento enquanto o outro visa os aspectos do relacionamento em si.
 
 
-Para inicializar um filtro, deve-se invocar o método [filter()](../class/Related#filter) após os [filtros de relacionamentos](#filtros-de-relacionamentos)
+Para inicializar um filtro, deve-se invocar o método [**filter()**](../class/Related#filter) após os [filtros de relacionamentos](#filtros-de-relacionamentos)
 
 ```java
-entity.getChildren().ofType("cliente").filter() ...
+entity.getChildren()
+      .ofType("cliente")
+      .filter() 
+      ...
 ```
 
 ou diretamente após os métodos iniciais (caso não for usar [filtros de relacionamentos](#filtros-de-relacionamentos))
 
 ```java
-entity.getChildren().filter() ...
+entity.getChildren()
+      .filter()
+      ...
 ```
 
 Os métodos usado para filtragem são:
