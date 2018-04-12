@@ -109,7 +109,7 @@ Abaixo temos uma visão expandida de todos os métodos que podem ser usados em u
 ### Primeiro passo
 Com um objeto relacionável em mãos (ator ou entidade) a consulta deve ser iniciada por um dos seguintes métodos:
 
-* [getParents()](../class/Entity#getparents)
+  * [getParents()](../class/Entity#getparents)
   * [getParentActors()](../class/Entity#getparentactors)
   * [getParentEntities()](../class/Entity#getparententities)
   * [getSiblings()](../class/Entity#getsiblings)
@@ -122,3 +122,24 @@ Com um objeto relacionável em mãos (ator ou entidade) a consulta deve ser inic
 Todos esses métodos retornam um objeto do tipo [Related](../class/Related) que pode atuar como
 1. um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html);
 2. um [Builder](https://blog.crisp.se/2013/10/09/perlundholm/another-builder-pattern-for-java).
+
+### Iterable
+Com o _Itetarable_ é possível iterar nos relacionamentos
+```java
+for(child : entity.getChildren()) {
+ ...
+}
+```
+ou inseri-los em uma [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html).
+```java
+list = new ArrayList(entity.getChildren());
+```
+> :exclamation: **Atenção!**
+> Sempre que possível, limitar a quantidade de resultados usando [limit(n)](../class/Related#limitn) para não sobrecarregar os recursos físicos.
+> Principalmente no caso de se delegar a uma _Collection_, pois todos os relacionamentos são retornados de uma só vez e a quantidade de relacionamentos pode ultrapassar a quantidade de memória disponível.
+
+### Builder
+#### Filtros de relacionamentos
+#### Filtros de relacionáveis
+#### Ordenação
+#### Finalizadores
