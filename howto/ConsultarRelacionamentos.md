@@ -50,7 +50,7 @@ O conceito de hierarquia de parentesco (pai, filho e irmão) é utilizado como p
 Deve-se levar em conta a liberdade que as entidades/atores tem de se relacionar entre si e a direção do relacionamento ao se realizar uma busca, para assim, evitar resultados inesperados.
 
 ## Consulta
-A partir de uma instância de ator ou entidade, é possível navegar por toda [hierarquia](#hierarquia) de relacionamentos deste objeto e selecionar os relacionamentos que atendem a um certo critério.
+A partir de uma instância de ator ou entidade, é possível navegar por toda [hierarquia](#hierarquia) de relacionamentos deste objeto e selecionar os relacionamentos, assim como os objetos relacionados, que atendem a um certo critério.
 
 Abaixo temos uma visão expandida de todos os métodos que podem ser usados em uma consulta:
 
@@ -106,3 +106,19 @@ Abaixo temos uma visão expandida de todos os métodos que podem ser usados em u
   * [groupByType()](../class/Related#groupbytype)
   * [groupByAttr(name)](../class/Related#groupbyattrname)
   
+### Primeiro passo
+Com um objeto relacionável em mãos (ator ou entidade) a consulta deve ser iniciada por um dos seguintes métodos:
+
+* [getParents()](../class/Entity#getparents)
+  * [getParentActors()](../class/Entity#getparentactors)
+  * [getParentEntities()](../class/Entity#getparententities)
+  * [getSiblings()](../class/Entity#getsiblings)
+  * [getSiblingActors()](../class/Entity#getsiblingactors)
+  * [getSiblingEntities()](../class/Entity#getsiblingentities)
+  * [getChildren()](../class/Entity#getchildren)
+  * [getChildrenActors()](../class/Entity#getchildrenactors)
+  * [getChildrenEntities()](../class/Entity#getchildrenentities)
+
+Todos esses métodos retornam um objeto do tipo [Related](../class/Related) que pode atuar como
+1. um [Iterable](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html);
+2. um [Builder](https://blog.crisp.se/2013/10/09/perlundholm/another-builder-pattern-for-java).
