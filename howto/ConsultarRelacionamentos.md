@@ -158,14 +158,14 @@ Com o _builder_ é possível preparar a busca, aplicando filtros e ordenações,
 
 Assim que todos os métodos de preparação foram invocados, pode-se iterar o objeto resultante para que a busca seja realizada e os resultados retornados a cada iteração.
 
-É possível filtrar os relacionamentos, os objetos relacionados, ordená-los ou ainda agregar o resultado em um mapa, lista ou simplesmente contar os resultados.
+É possível filtrar os relacionamentos, filtrar os objetos relacionados, ordená-los ou ainda agregar o resultado em um mapa, lista ou simplesmente contar os resultados.
 
 #### Filtros de relacionamentos
 Os primeiros filtros que podem ser aplicados se referem aos relacionamentos do o ator ou entidade em questão.
 
-< :exclamation: **Atenção!**
-<
-< Não confundir com [filtros de relacionáveis](#filtros-de-relacionaveis). Aqui são considerados os aspectos do relacionamento em si enquanto o outro visa as contrapartes deste relacionamento.
+> :exclamation: **Atenção!**
+>
+> Não confundir com [filtros de relacionáveis](#filtros-de-relacionaveis). Aqui são considerados os aspectos do relacionamento em si enquanto o outro visa as contrapartes deste relacionamento.
 
 Os métodos são:
 
@@ -183,7 +183,23 @@ Os métodos são:
 Exemplo:
 
 ```java
+// prepara a busca dos clientes de uma loja
+clientes = loja.getChildrenActors() // acesso ao builder referente aos relacionamentos de atores filhos
+ .ofType("cliente") // filtra os relacionamentos com atores configurados como "cliente"
+ .relatedOnOrBefore(lastMonth) // filtra os relacionamentos criados a mais de um mês
+ .limit(10); // limita os resultados em 10
+ 
+// a busca é executada e os resultados iterados
+for(cliente : clientes) {
+ ...
+}
 ```
+
+> :exclamation: **Atenção!**
+>
+> Sempre que possível, limitar a quantidade de resultados usando [limit(n)](../class/Related#limitn) para não sobrecarregar os recursos físicos.
+>
+> Principalmente no caso de se delegar a uma _Collection_, pois todos os relacionamentos são retornados de uma só vez e a quantidade de relacionamentos pode ultrapassar a quantidade de memória disponível.
  
 #### Filtros de relacionáveis
 #### Ordenação
