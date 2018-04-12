@@ -154,11 +154,37 @@ list = new ArrayList(entity.getChildren());
 Com o _builder_ é possível preparar a busca, aplicando filtros e ordenações, afim de refinar os resultados.
 > :grey_exclamation: **Dica**
 >
-> Todos os métodos retornados pelo builder, exceto os [finalizadores](#finalizadores), retornam um objeto que pode atuar tanto como um _builder_ (dando continuidade à preparação da busca) ou um [_iterable_](###iterable).
+> Todos os métodos retornados pelo builder, exceto os [finalizadores](#finalizadores), retornam um objeto que pode continuar atuar como um _builder_ ou atuar como um [_iterable_](###iterable).
 
-Abaixo é explicado todos os recursos do _builder_.
+Assim que todos os métodos de preparação foram invocados, pode-se iterar o objeto resultante para que a busca seja realizada e os resultados retornados a cada iteração.
+
+É possível filtrar os relacionamentos, os objetos relacionados, ordená-los ou ainda agregar o resultado em um mapa, lista ou simplesmente contar os resultados.
 
 #### Filtros de relacionamentos
+Os primeiros filtros que podem ser aplicados se referem aos relacionamentos do o ator ou entidade em questão.
+
+< :exclamation: **Atenção!**
+<
+< Não confundir com [filtros de relacionáveis](#filtros-de-relacionaveis). Aqui são considerados os aspectos do relacionamento em si enquanto o outro visa as contrapartes deste relacionamento.
+
+Os métodos são:
+
+  * [ofType(types)](../class/Related#oftypetypes)
+  * [relatedOn(date)](../class/Related#relatedondata)
+  * [relatedOnOrAfter(date)](../class/Related#relatedonorafterdate)
+  * [relatedOnOrBefore(date)](../class/Related#relatedonorbeforedate)
+  * [relatedAfter(date)](../class/Related#relatedafterdate)
+  * [relatedBefore(date)](../class/Related#relatedbeforedate)
+  * [relatedBetween(date1, date2)](../class/Related#relatedbetweendate1-date2)
+  * [offset(n)](../class/Related#offsetn)
+  * [limit(n)](../class/Related#limitn)
+  * [filter()](../class/Related#filter)
+
+Exemplo:
+
+```java
+```
+ 
 #### Filtros de relacionáveis
 #### Ordenação
 #### Finalizadores
