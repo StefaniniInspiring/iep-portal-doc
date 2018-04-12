@@ -130,15 +130,34 @@ for(child : entity.getChildren()) {
  ...
 }
 ```
+pode-se navegar na hierarquia de relacionamentos
+```java
+for(child : entity.getChildren()) {
+ for(grandson : child.getChildren() {
+  for(greatGrandson : grandson.getChildren() {
+   ...
+  }
+ }
+}
+```
 ou inseri-los em uma [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html).
 ```java
 list = new ArrayList(entity.getChildren());
 ```
 > :exclamation: **Atenção!**
+>
 > Sempre que possível, limitar a quantidade de resultados usando [limit(n)](../class/Related#limitn) para não sobrecarregar os recursos físicos.
+>
 > Principalmente no caso de se delegar a uma _Collection_, pois todos os relacionamentos são retornados de uma só vez e a quantidade de relacionamentos pode ultrapassar a quantidade de memória disponível.
 
 ### Builder
+Com o _builder_ é possível preparar a busca, aplicando filtros e ordenações, afim de refinar os resultados.
+> :grey_exclamation: **Dica**
+>
+> Todos os métodos retornados pelo builder, exceto os [finalizadores](#finalizadores), retornam um objeto que pode atuar tanto como um _builder_ (dando continuidade à preparação da busca) ou um [_iterable_](###iterable).
+
+Abaixo é explicado todos os recursos do _builder_.
+
 #### Filtros de relacionamentos
 #### Filtros de relacionáveis
 #### Ordenação
