@@ -152,11 +152,12 @@ list = new ArrayList(entity.getChildren());
 
 ### Builder
 Com o _builder_ é possível preparar a busca, aplicando filtros e ordenações, afim de refinar os resultados.
+
 > :grey_exclamation: **Dica**
 >
 > Todos os métodos retornados pelo builder, exceto os [finalizadores](#finalizadores), retornam um objeto que pode continuar atuar como um _builder_ ou atuar como um [_iterable_](###iterable).
 
-Assim que todos os métodos de preparação foram invocados, pode-se iterar o objeto resultante para que a busca seja realizada e os resultados retornados a cada iteração.
+Assim que todos os métodos de preparação foram invocados, pode-se iterar o objeto resultante para que a busca seja realizada e os resultados retornados a cada iteração. Também pode-se invocar um método [finalizador](#finalizador) para se obter um resultado específico. 
 
 É possível filtrar os relacionamentos, filtrar os objetos relacionados, ordená-los ou ainda agregar o resultado em um mapa, lista ou simplesmente contar os resultados.
 
@@ -178,16 +179,15 @@ Os métodos são:
   * [relatedBetween(date1, date2)](../class/Related#relatedbetweendate1-date2)
   * [offset(n)](../class/Related#offsetn)
   * [limit(n)](../class/Related#limitn)
-  * [filter()](../class/Related#filter)
 
 Exemplo:
 
 ```java
 // prepara a busca dos clientes de uma loja
 clientes = loja.getChildrenActors() // acesso ao builder referente aos relacionamentos de atores filhos
- .ofType("cliente") // filtra os relacionamentos com atores configurados como "cliente"
- .relatedOnOrBefore(lastMonth) // filtra os relacionamentos criados a mais de um mês
- .limit(10); // limita os resultados em 10
+               .ofType("cliente") // filtra os relacionamentos com atores configurados como "cliente"
+               .relatedOnOrBefore(lastMonth) // filtra os relacionamentos criados a mais de um mês
+               .limit(10); // limita os resultados em 10
  
 // a busca é executada e os resultados iterados
 for(cliente : clientes) {
@@ -202,5 +202,45 @@ for(cliente : clientes) {
 > Principalmente no caso de se delegar a uma _Collection_, pois todos os relacionamentos são retornados de uma só vez e a quantidade de relacionamentos pode ultrapassar a quantidade de memória disponível.
  
 #### Filtros de relacionáveis
+São filtros usados para selecionar os atores ou entidades relacionadas.
+
+> :exclamation: **Atenção!**
+>
+> Não confundir com [filtros de relacionamentos](#filtros-de-relacionamentos). Aqui são consideradas as contrapartes de um  relacionamento enquanto o outro visa os aspectos do relacionamento em si.
+
+
+Para inicializar um filtro, deve-se invocar o método [filter()](../class/Related#filter) após os [filtros de relacionamentos](#filtros-de-relacionamentos)
+
+```java
+entity.getChildren().ofType("cliente").filter() ...
+```
+
+ou diretamente após os métodos iniciais (caso não for usar [filtros de relacionamentos](#filtros-de-relacionamentos))
+
+```java
+entity.getChildren().filter() ...
+```
+
+Os métodos usado para filtragem são:
+  * [withAttr(name, value)](../class/Filter#withattrname-value)
+  * [withAttrLike(name, value)](../class/Filter#withattrlikename-value)
+  * [createdOn(date)](../class/Filter#createdondate)
+  * [createdOnOrAfter(date)](../class/Filter#createdonorafterdate)
+  * [createdOnOrBefore(date)](../class/Filter#createdonorbeforedate)
+  * [createdAfter(date)](../class/Filter#createdafterdate)
+  * [createdBefore(date)](../class/Filter#createdbeforedate)
+  * [createdBetween(date1, date2)](../class/Filter#createdbetweendate1-date2)
+  * [updatedOn(date)](../class/Filter#updatedondate)
+  * [updatedOnOrAfter(date)](../class/Filter#updatedonorafterdate)
+  * [updatedOnOrBefore(date)](../class/Filter#updatedonorbeforedate)
+  * [updatedAfter(date)](../class/Filter#updatedafterdate)
+  * [updatedBefore(date)](../class/Filter#updatedbeforedate)
+  * [updatedBetween(date1, date2)](../class/Filter#updatedbetweendate1-date2)
+  * [not()](../class/Filter#not)
+  * [or()](../class/Filter#or)
+  * [and()](../class/Filter#and)
+  * [openBrackets()](../class/Filter#openbrackets)
+  * [closeBrackets()](../class/Filter#closebrackets)
+
 #### Ordenação
 #### Finalizadores
