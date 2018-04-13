@@ -246,6 +246,29 @@ Os métodos usado para filtragem são:
   * [and()](../class/Filter#and)
   * [openBrackets()](../class/Filter#openbrackets)
   * [closeBrackets()](../class/Filter#closebrackets)
+  
+Exemplo:
+
+```java
+```
 
 #### Ordenação
+Para ordernar os atores e entidades resultantes de uma busca, deve-se invocar o método [order()](../class/Filter#order) logo após os [filtros de relacionamentos](#filtros-de-relacionamentos) e [filtros de relacionáveis](#filtros-de-relacionaveis) e, em seguida, invocar o(s) método(s) referentes à ordenação:
+
+  * [byId()](../class/Order#byid)
+  * [byAttr(name)](../class/Order#byattrname)
+  * [byCreateDate()](../class/Order#bycreatedate)
+  * [byUpdateDate()](../class/Order#byupdatedate)
+  * [desc()](../class/Order#desc)
+  
+Exemplo:
+
+```java
+// consulta os clientes pela data de criação, do mais recente para o mais antigo
+loja.getChildrenActors()
+    .ofType("cliente")
+    .order() // acesso ao ordenador
+    .byCreationDate() // prepara uma ordenação pela data de criação
+    .desc(); // inverte a ordem de criação (descrescente)
+```
 #### Finalizadores
