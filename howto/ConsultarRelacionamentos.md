@@ -140,7 +140,7 @@ for(child : entity.getChildren()) {
  }
 }
 ```
-ou inseri-los em uma [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html).
+ou inseri-los em uma [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)
 ```java
 list = new ArrayList(entity.getChildren());
 ```
