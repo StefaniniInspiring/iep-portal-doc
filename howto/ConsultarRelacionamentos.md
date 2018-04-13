@@ -1,6 +1,7 @@
 # Como consultar relacionamentos
 
 ---
+
   * [O que são relacionamentos](#o-que-são-relacionamentos)
     * [Direcionamento](#direcionamento)
     * [Hierarquia](#hierarquia)
@@ -13,6 +14,7 @@
       2. [Filtros de relacionáveis](#2-filtros-de-relacionáveis)
       3. [Ordenação](#3-ordenação)
       4. [Finalização](#4-finalização)
+
 ---
 
 ## O que são relacionamentos
