@@ -164,7 +164,7 @@ Assim que todos os métodos de preparação foram invocados, pode-se iterar o ob
 #### Filtros de relacionamentos
 Os primeiros filtros que podem ser aplicados se referem aos relacionamentos do o ator ou entidade em questão.
 
-> :exclamation: **Atenção!**
+> :exclamation: **Atenção**
 >
 > Não confundir com [filtros de relacionáveis](#filtros-de-relacionáveis). Aqui são considerados os aspectos do relacionamento em si enquanto o outro visa as contrapartes deste relacionamento.
 
