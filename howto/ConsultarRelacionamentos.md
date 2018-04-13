@@ -195,7 +195,7 @@ for(cliente : clientes) {
 }
 ```
 
-> :exclamation: **Atenção!**
+> :exclamation: **Atenção**
 >
 > Sempre que possível, limitar a quantidade de resultados usando [limit(n)](../class/Related#limitn) para não sobrecarregar os recursos físicos.
 >
@@ -204,7 +204,7 @@ for(cliente : clientes) {
 #### Filtros de relacionáveis
 São filtros usados para selecionar os atores ou entidades relacionadas.
 
-> :exclamation: **Atenção!**
+> :exclamation: **Atenção**
 >
 > Não confundir com [filtros de relacionamentos](#filtros-de-relacionamentos). Aqui são consideradas as contrapartes de um  relacionamento enquanto o outro visa os aspectos do relacionamento em si.
 
