@@ -155,13 +155,13 @@ Com o _builder_ é possível preparar a busca, aplicando filtros e ordenações,
 
 > :grey_exclamation: **Dica**
 >
-> Todos os métodos retornados pelo builder, exceto os [finalizadores](#finalizadores), retornam um objeto que pode continuar atuar como um _builder_ ou atuar como um [_iterable_](###iterable).
+> Todos os métodos retornados pelo builder, exceto os [finalizadores](#finalização), retornam um objeto que pode continuar atuar como um _builder_ ou atuar como um [_iterable_](###iterable).
 
-Assim que todos os métodos de preparação foram invocados, pode-se iterar o objeto resultante para que a busca seja realizada e os resultados retornados a cada iteração. Também pode-se invocar um método [finalizador](#finalizador) para se obter um resultado específico. 
+Assim que todos os métodos de preparação foram invocados, pode-se iterar o objeto resultante para que a busca seja realizada e os resultados retornados a cada iteração. Também pode-se invocar um método [finalizador](#finalização) para se obter um resultado específico. 
 
-É possível filtrar os relacionamentos, filtrar os objetos relacionados, ordená-los ou ainda agregar o resultado em um mapa, lista ou simplesmente contar os resultados.
+As categorias de métodos são opcionais - pode-se ordenar sem aplicar filtros, por exemplo - e devem respeitar a ordem abaixo:
 
-#### Filtros de relacionamentos
+#### 1. Filtros de relacionamentos
 Os primeiros filtros que podem ser aplicados se referem aos relacionamentos do o ator ou entidade em questão.
 
 > :exclamation: **Atenção**
@@ -201,7 +201,7 @@ for(cliente : clientes) {
 >
 > Principalmente no caso de se delegar a uma _Collection_, pois todos os relacionamentos são retornados de uma só vez e a quantidade de relacionamentos pode ultrapassar a quantidade de memória disponível.
  
-#### Filtros de relacionáveis
+#### 2. Filtros de relacionáveis
 São filtros usados para selecionar os atores ou entidades relacionadas.
 
 > :exclamation: **Atenção**
@@ -252,7 +252,7 @@ Exemplo:
 ```java
 ```
 
-#### Ordenação
+#### 2. Ordenação
 Para ordernar os atores e entidades resultantes de uma busca, deve-se invocar o método [**order()**](../class/Related#order) logo após os [filtros de relacionamentos](#filtros-de-relacionamentos) e [filtros de relacionáveis](#filtros-de-relacionaveis) quando presentes e, em seguida, invocar o(s) método(s) referentes à ordenação:
 
   * [byId()](../class/Order#byid)
@@ -271,7 +271,7 @@ loja.getChildrenActors()
     .byCreationDate() // prepara uma ordenação pela data de criação
     .desc(); // inverte a ordem de criação (descrescente)
 ```
-#### Finalizadores
+#### 3. Finalização
 São métodos que relaziam a consulta e transformam os resultados em um objeto específico.
 
 Devem ser invocados após todos os filtros e ordenações.
