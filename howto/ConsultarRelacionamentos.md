@@ -287,7 +287,7 @@ loja.getChildrenActors()
     .ofType("cliente")
     .order() // acesso ao ordenador
     .byCreationDate() // prepara uma ordenação pela data de criação
-    .desc(); // inverte a ordem de criação (descrescente)
+    .desc(); // inverte a ordem de ordenação (descrescente)
 ```
 #### 4. Finalização
 São métodos que relaziam a consulta e transformam os resultados em um objeto específico.
