@@ -144,7 +144,7 @@ ou inseri-los em uma [Collection](https://docs.oracle.com/javase/8/docs/api/java
 ```java
 list = new ArrayList(entity.getChildren());
 ```
-> :exclamation: **Atenção!**
+> :exclamation: **Atenção**
 >
 > Sempre que possível, limitar a quantidade de resultados usando [limit(n)](../class/Related#limitn) para não sobrecarregar os recursos físicos.
 >
@@ -272,3 +272,43 @@ loja.getChildrenActors()
     .desc(); // inverte a ordem de criação (descrescente)
 ```
 #### Finalizadores
+São métodos que relaziam a consulta e transformam os resultados em um objeto específico.
+
+Devem ser invocados após todos os filtros e ordenações.
+
+Os métodos finalizadores possíveis são:
+  * [count()](../class/Related#count)
+  * [iterator()](../class/Related#iterator)
+  * [toList()](../class/Related#tolist)
+  * [toMap()](../class/Related#tomap)
+  * [groupByType()](../class/Related#groupbytype)
+  * [groupByAttr(name)](../class/Related#groupbyattrname)
+  
+> :exclamation: **Atenção**
+>
+> Sempre que possível, e quando aplicável, limitar a quantidade de resultados usando [limit(n)](../class/Related#limitn) para não sobrecarregar os recursos físicos, pois nos métodos acima, todos os relacionamentos são retornados de uma só vez e a quantidade de relacionamentos pode ultrapassar a quantidade de memória disponível.
+
+Exemplos:
+```java
+// conta o total de clientes de uma loja
+total = loja.getChildrenActors()
+            .ofType("cliente")
+            .count();
+```
+
+```java
+// recupera o cliente mais antigo de uma loja utilizando iterator
+it = loja.getChildrenActors()
+         .ofType("cliente")
+         .order()
+         .byCreationDate()
+         .desc()
+         .limit(1)
+         .iterator(); // realiza a consulta e insere o resultado em um Iterator
+
+// utiliza o cliente caso este exista 
+if(it.hasNext()) {
+ cliente = it.next();
+ ...
+}
+```
