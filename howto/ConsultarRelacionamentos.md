@@ -1,5 +1,20 @@
 # Como consultar relacionamentos
 
+---
+  * [O que são relacionamentos](#o-que-são-relacionamentos)
+    * [Direcionamento](#direcionamento)
+    * [Hierarquia](#hierarquia)
+    * [Conclusão](#conclusão)
+  * [Consulta](#consulta)
+    * [Primeiro passo](#primeiro-passo)
+    * [Iterable](#iterable)
+    * [Builder](#builder)
+      1. [Filtros de relacionamentos](#1-filtros-de-relacionamentos)
+      2. [Filtros de relacionáveis](#2-filtros-de-relacionáveis)
+      3. [Ordenação](#3-ordenação)
+      4. [Finalização](#4-finalização)
+---
+
 ## O que são relacionamentos
 
 Relacionamentos são ligações entre entitades e atores que possuem uma afinidade conceitual.
@@ -8,7 +23,7 @@ Entidades podem ser relacionadas com outras entidades ou atores.
 
 Atores apenas podem se relacionar com entidades.
 
-## Direção
+## Direcionamento
 Exitem 2 tipos de relacionamentos: bidirecional e unidirecional
 
 ### Bidirecional
@@ -166,7 +181,7 @@ Os primeiros filtros que podem ser aplicados se referem aos relacionamentos do o
 
 > :exclamation: **Atenção**
 >
-> Não confundir com [filtros de relacionáveis](#filtros-de-relacionáveis). Aqui são considerados os aspectos do relacionamento em si enquanto o outro visa as contrapartes deste relacionamento.
+> Não confundir com [filtros de relacionáveis](#2-filtros-de-relacionáveis). Aqui são considerados os aspectos do relacionamento em si enquanto o outro visa as contrapartes deste relacionamento.
 
 Os métodos são:
 
@@ -206,10 +221,10 @@ São filtros usados para selecionar os atores ou entidades relacionadas.
 
 > :exclamation: **Atenção**
 >
-> Não confundir com [filtros de relacionamentos](#filtros-de-relacionamentos). Aqui são consideradas as contrapartes de um  relacionamento enquanto o outro visa os aspectos do relacionamento em si.
+> Não confundir com [filtros de relacionamentos](#1-filtros-de-relacionamentos). Aqui são consideradas as contrapartes de um  relacionamento enquanto o outro visa os aspectos do relacionamento em si.
 
 
-Para inicializar um filtro, deve-se invocar o método [**filter()**](../class/Related#filter) após os [filtros de relacionamentos](#filtros-de-relacionamentos)
+Para inicializar um filtro, deve-se invocar o método [**filter()**](../class/Related#filter) após os [filtros de relacionamentos](#1-filtros-de-relacionamentos)
 
 ```java
 entity.getChildren()
@@ -218,7 +233,7 @@ entity.getChildren()
       ...
 ```
 
-ou diretamente após os métodos iniciais (caso não for usar [filtros de relacionamentos](#filtros-de-relacionamentos))
+ou diretamente após os métodos iniciais (caso não for usar [filtros de relacionamentos](#1-filtros-de-relacionamentos))
 
 ```java
 entity.getChildren()
@@ -252,8 +267,8 @@ Exemplo:
 ```java
 ```
 
-#### 2. Ordenação
-Para ordernar os atores e entidades resultantes de uma busca, deve-se invocar o método [**order()**](../class/Related#order) logo após os [filtros de relacionamentos](#filtros-de-relacionamentos) e [filtros de relacionáveis](#filtros-de-relacionaveis) quando presentes e, em seguida, invocar o(s) método(s) referentes à ordenação:
+#### 3. Ordenação
+Para ordernar os atores e entidades resultantes de uma busca, deve-se invocar o método [**order()**](../class/Related#order) logo após os [filtros de relacionamentos](#1-filtros-de-relacionamentos) e [filtros de relacionáveis](#2-filtros-de-relacionáveis) quando presentes e, em seguida, invocar o(s) método(s) referentes à ordenação:
 
   * [byId()](../class/Order#byid)
   * [byAttr(name)](../class/Order#byattrname)
@@ -271,7 +286,7 @@ loja.getChildrenActors()
     .byCreationDate() // prepara uma ordenação pela data de criação
     .desc(); // inverte a ordem de criação (descrescente)
 ```
-#### 3. Finalização
+#### 4. Finalização
 São métodos que relaziam a consulta e transformam os resultados em um objeto específico.
 
 Devem ser invocados após todos os filtros e ordenações.
