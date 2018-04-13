@@ -253,7 +253,7 @@ Exemplo:
 ```
 
 #### Ordenação
-Para ordernar os atores e entidades resultantes de uma busca, deve-se invocar o método [order()](../class/Filter#order) logo após os [filtros de relacionamentos](#filtros-de-relacionamentos) e [filtros de relacionáveis](#filtros-de-relacionaveis) e, em seguida, invocar o(s) método(s) referentes à ordenação:
+Para ordernar os atores e entidades resultantes de uma busca, deve-se invocar o método [**order()**](../class/Filter#order) logo após os [filtros de relacionamentos](#filtros-de-relacionamentos) e [filtros de relacionáveis](#filtros-de-relacionaveis) quando presentes e, em seguida, invocar o(s) método(s) referentes à ordenação:
 
   * [byId()](../class/Order#byid)
   * [byAttr(name)](../class/Order#byattrname)
