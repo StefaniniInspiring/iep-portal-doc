@@ -332,3 +332,40 @@ if(it.hasNext()) {
 ```
 
 ### Exemplos
+Nos exemplos a seguir, usaremos sempre os mesmos atores, entidades e relacionamentos definidos abaixo:
+
+#### Entidades
+  * loja
+  * fatura
+  * prodtuo
+  
+#### Atores
+  * funcionario
+  * cliente
+  
+#### Relacionamentos
+![Relacionamentos](../image/rel-exemplos.png)
+
+#### 1. Cálculo de quanto um vendedor específico de uma loja vendeu nos últimos 30 dias:
+```java
+vendedor = loja.getChildrenActors() // iniciamos a busca pelos atores "filhos" da entidade loja
+			            .ofType("funcionario") // filtramos os relacionamentos apenas com funcionários
+			            .withAttr("cargo", "vendedor") // filtramos os funcionários que sejam vendedores
+			            .withAttr("cpf", "123.456.789-00") // filtramos apenas o vendedor que buscamos
+			            .limit(1) // como sabemos a quantidade de resultados, usamos um limitante como boa prática
+			            .iterator()
+			            .next(); // aqui chamamos next() diretamente, mas poderiamos usar hasNext()/next() para evitar exceptions caso o vendedor não seja encontrado
+
+ultimos30Dias = DateUtils.addDays(new Date(), -30);
+
+faturas = vendedor.getChildrenEntities() // com o vendedor em mãos, iniciamos a busca por seus "filhos"
+				              .ofType("fatura") // filtramos os relacionamentos apenas com faturas
+				              .relatedOnOrAfter(ultimos30Dias); // também filtramos os relacionamentos que ocorreram nos últimos 30 dias
+
+total = 0
+
+// iteramos nas faturas encontradas e agregamos o seu valor
+for(fatura : faturas) {
+	total += fatura.get("valor")
+}
+```
