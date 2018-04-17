@@ -389,3 +389,27 @@ for(vendedor : vendedores) {
 	}
 }
 ```
+
+#### 3. Listagem dos produtos comprados por um cliente nos últimos 7 dias:
+```java
+ultimos7Dias = DateUtils.addDays(new Date(), -7);
+
+faturas = cliente.getChildrenEntities() // iniciamos a consulta pelas entidades "filhas" do cliente
+		.ofType("fatura") // filtramos os relacionamentos com as faturas de compra do cliente
+		.relatedOnOrAfter(ultimos7Dias); // também filtramos os relacionamentos que ocorreram apenas nos últimos 7 dias	
+
+produtos = new ArrayList();
+
+// iteramos nas faturas de compra do cliente para listar seus produtos
+for(fatura : faturas) {
+	produtosDeUmaFatura = fatura.getChildrenEntities() // para cada fatura, buscamos suas entidades "filhas"
+				.ofType("produto") // filtramos os relacionamentos apenas com produtos
+
+	// iteramos nos produtos da fatura para inseri-los na lista
+	for(produtoDaFatura : produtosDeUmaFatura) {
+		produtos.add(produtoDaFatura);
+	}
+}
+```
+
+---
