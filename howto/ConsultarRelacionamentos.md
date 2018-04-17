@@ -173,9 +173,9 @@ Com o _builder_ é possível preparar a busca, aplicando filtros e ordenações,
 
 > :grey_exclamation: **Dica**
 >
-> Todos os métodos retornados pelo builder, exceto os [finalizadores](#finalização), retornam um objeto que pode continuar atuar como um _builder_ ou atuar como um [_iterable_](###iterable).
+> Todos os métodos retornados pelo builder, exceto os [finalizadores](#4-finalização), retornam um objeto que pode continuar atuar como um _builder_ ou atuar como um [_iterable_](#iterable).
 
-Assim que todos os métodos de preparação foram invocados, pode-se iterar o objeto resultante para que a busca seja realizada e os resultados retornados a cada iteração. Também pode-se invocar um método [finalizador](#finalização) para se obter um resultado específico. 
+Assim que todos os métodos de preparação foram invocados, pode-se iterar o objeto resultante para que a busca seja realizada e os resultados retornados a cada iteração. Também pode-se invocar um método [finalizador](#4-finalização) para se obter um resultado específico. 
 
 As categorias de métodos são opcionais - pode-se ordenar sem aplicar filtros, por exemplo - e devem respeitar a ordem abaixo:
 
