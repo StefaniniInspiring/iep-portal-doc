@@ -151,11 +151,11 @@ for(child : entity.getChildren()) {
 pode-se navegar na hierarquia de relacionamentos
 ```java
 for(child : entity.getChildren()) {
- for(grandson : child.getChildren() {
-  for(greatGrandson : grandson.getChildren() {
-   ...
-  }
- }
+    for(grandson : child.getChildren() {
+        for(greatGrandson : grandson.getChildren() {
+	    ...
+	}
+    }
 }
 ```
 ou inseri-los em uma [Collection](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html)
@@ -326,8 +326,8 @@ it = loja.getChildrenActors()
 
 // utiliza o cliente caso este exista 
 if(it.hasNext()) {
- cliente = it.next();
- ...
+    cliente = it.next();
+    ...
 }
 ```
 
@@ -349,44 +349,44 @@ Nos exemplos a seguir, usaremos sempre os mesmos atores, entidades e relacioname
 #### 1. Cálculo de quanto um vendedor específico de uma loja vendeu nos últimos 30 dias:
 ```java
 vendedor = loja.getChildrenActors() // iniciamos a busca pelos atores "filhos" da entidade loja
-		.ofType("funcionario") // filtramos os relacionamentos apenas com funcionários
-		.withAttr("cargo", "vendedor") // filtramos os funcionários que sejam vendedores
-		.withAttr("cpf", "123.456.789-00") // filtramos apenas o vendedor que buscamos
-		.limit(1) // como sabemos a quantidade de resultados, usamos um limitante como boa prática
-		.iterator()
-		.next(); // aqui chamamos next() diretamente, mas poderiamos usar hasNext()/next() para evitar exceptions caso o vendedor não seja encontrado
+               .ofType("funcionario") // filtramos os relacionamentos apenas com funcionários
+               .withAttr("cargo", "vendedor") // filtramos os funcionários que sejam vendedores
+               .withAttr("cpf", "123.456.789-00") // filtramos apenas o vendedor que buscamos
+               .limit(1) // como sabemos a quantidade de resultados, usamos um limitante como boa prática
+               .iterator()
+               .next(); // aqui chamamos next() diretamente, mas poderiamos usar hasNext()/next() para evitar exceptions caso o vendedor não seja encontrado
 
 ultimos30Dias = DateUtils.addDays(new Date(), -30);
 
 faturas = vendedor.getChildrenEntities() // com o vendedor em mãos, iniciamos a busca por seus "filhos"
-		.ofType("fatura") // filtramos os relacionamentos apenas com faturas
-		.relatedOnOrAfter(ultimos30Dias); // também filtramos os relacionamentos que ocorreram nos últimos 30 dias
+                  .ofType("fatura") // filtramos os relacionamentos apenas com faturas
+                  .relatedOnOrAfter(ultimos30Dias); // também filtramos os relacionamentos que ocorreram nos últimos 30 dias
 
 total = 0
 
 // iteramos nas faturas encontradas e agregamos o seu valor
 for(fatura : faturas) {
-	total += fatura.get("valor")
+    total += fatura.get("valor")
 }
 ```
 
 ####  2. Cálculo de quanto uma loja faturou nos últimos 30 dias:
 ```java
 vendedores = loja.getChildrenActors() // começamos por pegar os atores "filhos" da entidade loja
-		.ofType("funcionario") // filtramos os relacionamentos apenas com funcionários
-		.withAttr("cargo", "vendedor"); // filtramos os funcionários que sejam vendedores
+                 .ofType("funcionario") // filtramos os relacionamentos apenas com funcionários
+                 .withAttr("cargo", "vendedor"); // filtramos os funcionários que sejam vendedores
 
 ultimos30Dias = DateUtils.addDays(new Date(), -30);
 total = 0
 
 for(vendedor : vendedores) {
-	faturas = vendedor.getChildrenEntities() // para cada vendedor, iniciamos a busca por seus "filhos"
-			.ofType("fatura") // filtramos os relacionamentos apenas com faturas
-			.relatedOnOrAfter(ultimos30Dias); // também filtramos os relacionamentos que ocorreram apenas nos últimos 30 dias	
+    faturas = vendedor.getChildrenEntities() // para cada vendedor, iniciamos a busca por seus "filhos"
+                      .ofType("fatura") // filtramos os relacionamentos apenas com faturas
+                      .relatedOnOrAfter(ultimos30Dias); // também filtramos os relacionamentos que ocorreram apenas nos últimos 30 dias	
 
-	for(fatura : faturas) {
-		total += fatura.get("valor")
-	}
+    for(fatura : faturas) {
+        total += fatura.get("valor")
+    }
 }
 ```
 
@@ -395,20 +395,20 @@ for(vendedor : vendedores) {
 ultimos7Dias = DateUtils.addDays(new Date(), -7);
 
 faturas = cliente.getChildrenEntities() // iniciamos a consulta pelas entidades "filhas" do cliente
-		.ofType("fatura") // filtramos os relacionamentos com as faturas de compra do cliente
-		.relatedOnOrAfter(ultimos7Dias); // também filtramos os relacionamentos que ocorreram apenas nos últimos 7 dias	
+                 .ofType("fatura") // filtramos os relacionamentos com as faturas de compra do cliente
+                 .relatedOnOrAfter(ultimos7Dias); // também filtramos os relacionamentos que ocorreram apenas nos últimos 7 dias	
 
 produtos = new ArrayList();
 
 // iteramos nas faturas de compra do cliente para listar seus produtos
 for(fatura : faturas) {
-	produtosDeUmaFatura = fatura.getChildrenEntities() // para cada fatura, buscamos suas entidades "filhas"
-				.ofType("produto") // filtramos os relacionamentos apenas com produtos
+    produtosDeUmaFatura = fatura.getChildrenEntities() // para cada fatura, buscamos suas entidades "filhas"
+                                .ofType("produto") // filtramos os relacionamentos apenas com produtos
 
-	// iteramos nos produtos da fatura para inseri-los na lista
-	for(produtoDaFatura : produtosDeUmaFatura) {
-		produtos.add(produtoDaFatura);
-	}
+    // iteramos nos produtos da fatura para inseri-los na lista
+    for(produtoDaFatura : produtosDeUmaFatura) {
+        produtos.add(produtoDaFatura);
+    }
 }
 ```
 
