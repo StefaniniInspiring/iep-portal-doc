@@ -14,7 +14,7 @@ Entidades podem ser relacionadas com outras entidades ou atores.
 
 Atores apenas podem se relacionar com entidades.
 
-Para saber como consultar relacionamentos, acesse [Como consultar relacionamentos](ConsultarRelacionamentos).
+Para saber como consultar relacionamentos, acesse [Como consultar relacionamentos](ComoConsultarRelacionamentos).
 
 ## Direcionamento
 Exitem 2 tipos de relacionamentos: bidirecional e unidirecional
