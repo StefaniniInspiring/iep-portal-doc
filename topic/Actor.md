@@ -3,4 +3,5 @@
 [Metodos](../class/Actor)
 
 ## Ajuda
-* [Como consultar relacionamentos](../howto/ConsultarRelacionamentos)
+* [O que são relacionamentos](../howto/OQueSaoRelacionamentos)
+* [Como consultar relacionamentos](../howto/ComoConsultarRelacionamentos)
