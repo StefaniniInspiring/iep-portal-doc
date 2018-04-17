@@ -215,6 +215,21 @@ Os métodos usado para filtragem são:
 Exemplo:
 
 ```java
+// filtra os clientes com nome "João" ou "Maria" e que tenham idade igual a "30" ou "40"
+loja.getChildren()
+    .ofType("cliente")
+    .filter()
+    .openBrackets()
+        .withAttr("nome", "João")
+	.or()
+	.withAttr("nome", "Maria")
+    .closeBrackets()
+    .and()
+    .openBrackets()
+        .withAttr("idade", "30")
+	.or()
+	.withAttr("idade", "40")
+    .closeBrackets()
 ```
 
 #### 3. Ordenação
