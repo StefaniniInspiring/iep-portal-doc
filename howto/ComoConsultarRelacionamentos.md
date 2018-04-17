@@ -354,7 +354,7 @@ for(fatura : faturas) {
     produtosDeUmaFatura = fatura.getChildrenEntities() // para cada fatura, buscamos suas entidades "filhas"
                                 .ofType("produto") // filtramos os relacionamentos apenas com produtos
 
-    // iteramos nos produtos da fatura para inseri-los na lista
+    // iteramos nos produtos da fatura para os inserir na lista
     for(produtoDaFatura : produtosDeUmaFatura) {
         produtos.add(produtoDaFatura);
     }
