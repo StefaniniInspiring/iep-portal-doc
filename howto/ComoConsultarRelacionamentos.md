@@ -92,7 +92,7 @@ Todos esses métodos retornam um objeto do tipo [Related](../class/Related) que 
 Com o _Itetarable_ é possível iterar nos relacionamentos
 ```java
 for(child : entity.getChildren()) {
- ...
+    ...
 }
 ```
 pode-se navegar na hierarquia de relacionamentos
@@ -156,7 +156,7 @@ clientes = loja.getChildrenActors() // acesso ao builder referente aos relaciona
  
 // a busca é executada e os resultados iterados
 for(cliente : clientes) {
- ...
+    ...
 }
 ```
 
