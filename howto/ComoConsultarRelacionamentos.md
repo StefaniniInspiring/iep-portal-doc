@@ -361,4 +361,9 @@ for(fatura : faturas) {
 }
 ```
 
+#### 4. Partindo de um cliente, descobrir os outros clientes que compram nas mesmas lojas
+```java
+outros = cliente.getSiblingActors().ofType("cliente")
+```
+
 ---
