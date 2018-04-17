@@ -350,6 +350,7 @@ Nos exemplos a seguir, usaremos sempre os mesmos atores, entidades e relacioname
 ```java
 vendedor = loja.getChildrenActors() // iniciamos a busca pelos atores "filhos" da entidade loja
                .ofType("funcionario") // filtramos os relacionamentos apenas com funcionários
+	       .filter()
                .withAttr("cargo", "vendedor") // filtramos os funcionários que sejam vendedores
                .withAttr("cpf", "123.456.789-00") // filtramos apenas o vendedor que buscamos
                .limit(1) // como sabemos a quantidade de resultados, usamos um limitante como boa prática
@@ -364,7 +365,7 @@ faturas = vendedor.getChildrenEntities() // com o vendedor em mãos, iniciamos a
 
 total = 0
 
-// iteramos nas faturas encontradas e agregamos o seu valor
+// iteramos nas faturas encontradas e agregamos o valor
 for(fatura : faturas) {
     total += fatura.get("valor")
 }
@@ -374,7 +375,8 @@ for(fatura : faturas) {
 ```java
 vendedores = loja.getChildrenActors() // começamos por pegar os atores "filhos" da entidade loja
                  .ofType("funcionario") // filtramos os relacionamentos apenas com funcionários
-                 .withAttr("cargo", "vendedor"); // filtramos os funcionários que sejam vendedores
+                 .filter()
+		 .withAttr("cargo", "vendedor"); // filtramos os funcionários que sejam vendedores
 
 ultimos30Dias = DateUtils.addDays(new Date(), -30);
 total = 0
