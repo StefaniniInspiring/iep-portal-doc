@@ -369,3 +369,23 @@ for(fatura : faturas) {
 	total += fatura.get("valor")
 }
 ```
+
+####  2. Cálculo de quanto uma loja faturou nos últimos 30 dias:
+```java
+vendedores = loja.getChildrenActors() // começamos por pegar os atores "filhos" da entidade loja
+		.ofType("funcionario") // filtramos os relacionamentos apenas com funcionários
+		.withAttr("cargo", "vendedor"); // filtramos os funcionários que sejam vendedores
+
+ultimos30Dias = DateUtils.addDays(new Date(), -30);
+total = 0
+
+for(vendedor : vendedores) {
+	faturas = vendedor.getChildrenEntities() // para cada vendedor, iniciamos a busca por seus "filhos"
+			.ofType("fatura") // filtramos os relacionamentos apenas com faturas
+			.relatedOnOrAfter(ultimos30Dias); // também filtramos os relacionamentos que ocorreram apenas nos últimos 30 dias	
+
+	for(fatura : faturas) {
+		total += fatura.get("valor")
+	}
+}
+```
